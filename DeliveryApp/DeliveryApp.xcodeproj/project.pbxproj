@@ -7,17 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA3AE600277098E6003543FD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3AE5FF277098E6003543FD /* LoginViewController.swift */; };
+		FA3AE60227709926003543FD /* LoginViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3AE60127709926003543FD /* LoginViewInput.swift */; };
+		FA3AE60427709950003543FD /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3AE60327709950003543FD /* LoginPresenter.swift */; };
+		FA3AE60627709965003543FD /* LoginPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3AE60527709965003543FD /* LoginPresenterProtocol.swift */; };
+		FA3AE60827709993003543FD /* LoginInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3AE60727709993003543FD /* LoginInteractorInput.swift */; };
+		FA3AE60A277099AC003543FD /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3AE609277099AC003543FD /* LoginInteractor.swift */; };
+		FA3AE60C277099C6003543FD /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3AE60B277099C6003543FD /* LoginRouter.swift */; };
+		FA3AE60E277099DD003543FD /* LoginAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3AE60D277099DD003543FD /* LoginAssembly.swift */; };
+		FA3AE6162770BEDF003543FD /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3AE6152770BEDF003543FD /* RegisterViewController.swift */; };
+		FA3AE6182770BEF5003543FD /* RegisterViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3AE6172770BEF5003543FD /* RegisterViewInput.swift */; };
+		FA3AE61A2770BF1D003543FD /* RegisterPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3AE6192770BF1D003543FD /* RegisterPresenterProtocol.swift */; };
+		FA3AE61C2770BF33003543FD /* RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3AE61B2770BF33003543FD /* RegisterPresenter.swift */; };
+		FA3AE61E2770BF5B003543FD /* RegisterInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3AE61D2770BF5B003543FD /* RegisterInteractorInput.swift */; };
+		FA3AE6202770BF76003543FD /* RegisterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3AE61F2770BF76003543FD /* RegisterInteractor.swift */; };
+		FA3AE6222770BF8D003543FD /* RegisterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3AE6212770BF8D003543FD /* RegisterRouter.swift */; };
+		FA3AE6242770BFA4003543FD /* RegisterAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3AE6232770BFA4003543FD /* RegisterAssembly.swift */; };
+		FA3AE6272770CE57003543FD /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3AE6262770CE57003543FD /* ServiceLocator.swift */; };
+		FA3AE6292770CFB6003543FD /* AuthorizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3AE6282770CFB6003543FD /* AuthorizationService.swift */; };
+		FA3AE62C2770D289003543FD /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3AE62B2770D289003543FD /* NetworkError.swift */; };
 		FAB1713B277093AA004ACB90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB1713A277093AA004ACB90 /* AppDelegate.swift */; };
 		FAB1713D277093AA004ACB90 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB1713C277093AA004ACB90 /* SceneDelegate.swift */; };
-		FAB1713F277093AA004ACB90 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB1713E277093AA004ACB90 /* ViewController.swift */; };
 		FAB17142277093AA004ACB90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAB17140277093AA004ACB90 /* Main.storyboard */; };
 		FAB17144277093AB004ACB90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAB17143277093AB004ACB90 /* Assets.xcassets */; };
 		FAB17147277093AB004ACB90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAB17145277093AB004ACB90 /* LaunchScreen.storyboard */; };
-		FAB17150277093E7004ACB90 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = FAB1714F277093E7004ACB90 /* RxBlocking */; };
 		FAB17152277093E7004ACB90 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = FAB17151277093E7004ACB90 /* RxCocoa */; };
-		FAB17154277093E7004ACB90 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = FAB17153277093E7004ACB90 /* RxRelay */; };
 		FAB17156277093E7004ACB90 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FAB17155277093E7004ACB90 /* RxSwift */; };
-		FAB17158277093E7004ACB90 /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = FAB17157277093E7004ACB90 /* RxTest */; };
 		FAB1715E27709432004ACB90 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = FAB1715D27709432004ACB90 /* Alamofire */; };
 		FAB1716127709493004ACB90 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = FAB1716027709493004ACB90 /* FirebaseAuth */; };
 		FAB1716327709493004ACB90 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = FAB1716227709493004ACB90 /* FirebaseCrashlytics */; };
@@ -27,10 +42,28 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA3AE5FF277098E6003543FD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		FA3AE60127709926003543FD /* LoginViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewInput.swift; sourceTree = "<group>"; };
+		FA3AE60327709950003543FD /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		FA3AE60527709965003543FD /* LoginPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterProtocol.swift; sourceTree = "<group>"; };
+		FA3AE60727709993003543FD /* LoginInteractorInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractorInput.swift; sourceTree = "<group>"; };
+		FA3AE609277099AC003543FD /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		FA3AE60B277099C6003543FD /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		FA3AE60D277099DD003543FD /* LoginAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAssembly.swift; sourceTree = "<group>"; };
+		FA3AE6152770BEDF003543FD /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		FA3AE6172770BEF5003543FD /* RegisterViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewInput.swift; sourceTree = "<group>"; };
+		FA3AE6192770BF1D003543FD /* RegisterPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenterProtocol.swift; sourceTree = "<group>"; };
+		FA3AE61B2770BF33003543FD /* RegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenter.swift; sourceTree = "<group>"; };
+		FA3AE61D2770BF5B003543FD /* RegisterInteractorInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterInteractorInput.swift; sourceTree = "<group>"; };
+		FA3AE61F2770BF76003543FD /* RegisterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterInteractor.swift; sourceTree = "<group>"; };
+		FA3AE6212770BF8D003543FD /* RegisterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRouter.swift; sourceTree = "<group>"; };
+		FA3AE6232770BFA4003543FD /* RegisterAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAssembly.swift; sourceTree = "<group>"; };
+		FA3AE6262770CE57003543FD /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
+		FA3AE6282770CFB6003543FD /* AuthorizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationService.swift; sourceTree = "<group>"; };
+		FA3AE62B2770D289003543FD /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		FAB17137277093AA004ACB90 /* DeliveryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeliveryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAB1713A277093AA004ACB90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAB1713C277093AA004ACB90 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FAB1713E277093AA004ACB90 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FAB17141277093AA004ACB90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FAB17143277093AB004ACB90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAB17146277093AB004ACB90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -43,8 +76,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAB17158277093E7004ACB90 /* RxTest in Frameworks */,
-				FAB17154277093E7004ACB90 /* RxRelay in Frameworks */,
 				FAB17152277093E7004ACB90 /* RxCocoa in Frameworks */,
 				FAB1716727709493004ACB90 /* FirebaseStorage in Frameworks */,
 				FAB1715E27709432004ACB90 /* Alamofire in Frameworks */,
@@ -52,13 +83,175 @@
 				FAB1716527709493004ACB90 /* FirebaseFirestore in Frameworks */,
 				FAB1716327709493004ACB90 /* FirebaseCrashlytics in Frameworks */,
 				FAB1716127709493004ACB90 /* FirebaseAuth in Frameworks */,
-				FAB17150277093E7004ACB90 /* RxBlocking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA3AE5F52770967B003543FD /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				FAB17143277093AB004ACB90 /* Assets.xcassets */,
+				FAB17148277093AB004ACB90 /* Info.plist */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		FA3AE5F6277097FA003543FD /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				FAB1713A277093AA004ACB90 /* AppDelegate.swift */,
+				FAB1713C277093AA004ACB90 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		FA3AE5F72770980E003543FD /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				FA3AE60F2770BE6E003543FD /* RegisterScreen */,
+				FA3AE5F927709879003543FD /* LoginScreen */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		FA3AE5F827709816003543FD /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				FAB17145277093AB004ACB90 /* LaunchScreen.storyboard */,
+				FAB17140277093AA004ACB90 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		FA3AE5F927709879003543FD /* LoginScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FA3AE5FE277098BB003543FD /* LoginRouter */,
+				FA3AE5FD277098AE003543FD /* LoginInteractor */,
+				FA3AE5FC277098A5003543FD /* LoginPresenter */,
+				FA3AE5FB2770989C003543FD /* LoginView */,
+				FA3AE5FA27709884003543FD /* LoginAssembly */,
+			);
+			path = LoginScreen;
+			sourceTree = "<group>";
+		};
+		FA3AE5FA27709884003543FD /* LoginAssembly */ = {
+			isa = PBXGroup;
+			children = (
+				FA3AE60D277099DD003543FD /* LoginAssembly.swift */,
+			);
+			path = LoginAssembly;
+			sourceTree = "<group>";
+		};
+		FA3AE5FB2770989C003543FD /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				FA3AE5FF277098E6003543FD /* LoginViewController.swift */,
+				FA3AE60127709926003543FD /* LoginViewInput.swift */,
+			);
+			path = LoginView;
+			sourceTree = "<group>";
+		};
+		FA3AE5FC277098A5003543FD /* LoginPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				FA3AE60327709950003543FD /* LoginPresenter.swift */,
+				FA3AE60527709965003543FD /* LoginPresenterProtocol.swift */,
+			);
+			path = LoginPresenter;
+			sourceTree = "<group>";
+		};
+		FA3AE5FD277098AE003543FD /* LoginInteractor */ = {
+			isa = PBXGroup;
+			children = (
+				FA3AE60727709993003543FD /* LoginInteractorInput.swift */,
+				FA3AE609277099AC003543FD /* LoginInteractor.swift */,
+			);
+			path = LoginInteractor;
+			sourceTree = "<group>";
+		};
+		FA3AE5FE277098BB003543FD /* LoginRouter */ = {
+			isa = PBXGroup;
+			children = (
+				FA3AE60B277099C6003543FD /* LoginRouter.swift */,
+			);
+			path = LoginRouter;
+			sourceTree = "<group>";
+		};
+		FA3AE60F2770BE6E003543FD /* RegisterScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FA3AE6142770BE9B003543FD /* RegisterAssembly */,
+				FA3AE6132770BE93003543FD /* RegisterRouter */,
+				FA3AE6122770BE8A003543FD /* RegisterInteractor */,
+				FA3AE6112770BE82003543FD /* RegisterPresenter */,
+				FA3AE6102770BE7C003543FD /* RegisterView */,
+			);
+			path = RegisterScreen;
+			sourceTree = "<group>";
+		};
+		FA3AE6102770BE7C003543FD /* RegisterView */ = {
+			isa = PBXGroup;
+			children = (
+				FA3AE6152770BEDF003543FD /* RegisterViewController.swift */,
+				FA3AE6172770BEF5003543FD /* RegisterViewInput.swift */,
+			);
+			path = RegisterView;
+			sourceTree = "<group>";
+		};
+		FA3AE6112770BE82003543FD /* RegisterPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				FA3AE6192770BF1D003543FD /* RegisterPresenterProtocol.swift */,
+				FA3AE61B2770BF33003543FD /* RegisterPresenter.swift */,
+			);
+			path = RegisterPresenter;
+			sourceTree = "<group>";
+		};
+		FA3AE6122770BE8A003543FD /* RegisterInteractor */ = {
+			isa = PBXGroup;
+			children = (
+				FA3AE61D2770BF5B003543FD /* RegisterInteractorInput.swift */,
+				FA3AE61F2770BF76003543FD /* RegisterInteractor.swift */,
+			);
+			path = RegisterInteractor;
+			sourceTree = "<group>";
+		};
+		FA3AE6132770BE93003543FD /* RegisterRouter */ = {
+			isa = PBXGroup;
+			children = (
+				FA3AE6212770BF8D003543FD /* RegisterRouter.swift */,
+			);
+			path = RegisterRouter;
+			sourceTree = "<group>";
+		};
+		FA3AE6142770BE9B003543FD /* RegisterAssembly */ = {
+			isa = PBXGroup;
+			children = (
+				FA3AE6232770BFA4003543FD /* RegisterAssembly.swift */,
+			);
+			path = RegisterAssembly;
+			sourceTree = "<group>";
+		};
+		FA3AE6252770CE48003543FD /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FA3AE6262770CE57003543FD /* ServiceLocator.swift */,
+				FA3AE6282770CFB6003543FD /* AuthorizationService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FA3AE62A2770D27F003543FD /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				FA3AE62B2770D289003543FD /* NetworkError.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		FAB1712E277093AA004ACB90 = {
 			isa = PBXGroup;
 			children = (
@@ -78,13 +271,12 @@
 		FAB17139277093AA004ACB90 /* DeliveryApp */ = {
 			isa = PBXGroup;
 			children = (
-				FAB1713A277093AA004ACB90 /* AppDelegate.swift */,
-				FAB1713C277093AA004ACB90 /* SceneDelegate.swift */,
-				FAB1713E277093AA004ACB90 /* ViewController.swift */,
-				FAB17140277093AA004ACB90 /* Main.storyboard */,
-				FAB17143277093AB004ACB90 /* Assets.xcassets */,
-				FAB17145277093AB004ACB90 /* LaunchScreen.storyboard */,
-				FAB17148277093AB004ACB90 /* Info.plist */,
+				FA3AE62A2770D27F003543FD /* Base */,
+				FA3AE6252770CE48003543FD /* Services */,
+				FA3AE5F827709816003543FD /* Storyboards */,
+				FA3AE5F72770980E003543FD /* Modules */,
+				FA3AE5F6277097FA003543FD /* Delegates */,
+				FA3AE5F52770967B003543FD /* Source */,
 				FAB171682770952C004ACB90 /* GoogleService-Info.plist */,
 			);
 			path = DeliveryApp;
@@ -107,11 +299,8 @@
 			);
 			name = DeliveryApp;
 			packageProductDependencies = (
-				FAB1714F277093E7004ACB90 /* RxBlocking */,
 				FAB17151277093E7004ACB90 /* RxCocoa */,
-				FAB17153277093E7004ACB90 /* RxRelay */,
 				FAB17155277093E7004ACB90 /* RxSwift */,
-				FAB17157277093E7004ACB90 /* RxTest */,
 				FAB1715D27709432004ACB90 /* Alamofire */,
 				FAB1716027709493004ACB90 /* FirebaseAuth */,
 				FAB1716227709493004ACB90 /* FirebaseCrashlytics */,
@@ -179,9 +368,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAB1713F277093AA004ACB90 /* ViewController.swift in Sources */,
+				FA3AE60627709965003543FD /* LoginPresenterProtocol.swift in Sources */,
+				FA3AE6162770BEDF003543FD /* RegisterViewController.swift in Sources */,
+				FA3AE61E2770BF5B003543FD /* RegisterInteractorInput.swift in Sources */,
+				FA3AE6202770BF76003543FD /* RegisterInteractor.swift in Sources */,
+				FA3AE60E277099DD003543FD /* LoginAssembly.swift in Sources */,
+				FA3AE600277098E6003543FD /* LoginViewController.swift in Sources */,
 				FAB1713B277093AA004ACB90 /* AppDelegate.swift in Sources */,
+				FA3AE61A2770BF1D003543FD /* RegisterPresenterProtocol.swift in Sources */,
 				FAB1713D277093AA004ACB90 /* SceneDelegate.swift in Sources */,
+				FA3AE6182770BEF5003543FD /* RegisterViewInput.swift in Sources */,
+				FA3AE60A277099AC003543FD /* LoginInteractor.swift in Sources */,
+				FA3AE6292770CFB6003543FD /* AuthorizationService.swift in Sources */,
+				FA3AE61C2770BF33003543FD /* RegisterPresenter.swift in Sources */,
+				FA3AE60C277099C6003543FD /* LoginRouter.swift in Sources */,
+				FA3AE60227709926003543FD /* LoginViewInput.swift in Sources */,
+				FA3AE62C2770D289003543FD /* NetworkError.swift in Sources */,
+				FA3AE6222770BF8D003543FD /* RegisterRouter.swift in Sources */,
+				FA3AE6272770CE57003543FD /* ServiceLocator.swift in Sources */,
+				FA3AE60827709993003543FD /* LoginInteractorInput.swift in Sources */,
+				FA3AE6242770BFA4003543FD /* RegisterAssembly.swift in Sources */,
+				FA3AE60427709950003543FD /* LoginPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,10 +539,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5ACJXA9F63;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = DeliveryApp/Info.plist;
+				INFOPLIST_FILE = DeliveryApp/Source/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -362,10 +568,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5ACJXA9F63;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = DeliveryApp/Info.plist;
+				INFOPLIST_FILE = DeliveryApp/Source/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -434,30 +639,15 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		FAB1714F277093E7004ACB90 /* RxBlocking */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = FAB1714E277093E7004ACB90 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxBlocking;
-		};
 		FAB17151277093E7004ACB90 /* RxCocoa */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FAB1714E277093E7004ACB90 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxCocoa;
 		};
-		FAB17153277093E7004ACB90 /* RxRelay */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = FAB1714E277093E7004ACB90 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxRelay;
-		};
 		FAB17155277093E7004ACB90 /* RxSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FAB1714E277093E7004ACB90 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
-		};
-		FAB17157277093E7004ACB90 /* RxTest */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = FAB1714E277093E7004ACB90 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxTest;
 		};
 		FAB1715D27709432004ACB90 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
