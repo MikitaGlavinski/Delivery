@@ -8,5 +8,5 @@
 import Foundation
 
 protocol LoginViewInput: AnyObject {
-    
+    func showError(error: Error)
 }

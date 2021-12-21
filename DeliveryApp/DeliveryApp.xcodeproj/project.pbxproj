@@ -39,6 +39,11 @@
 		FAB1716527709493004ACB90 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = FAB1716427709493004ACB90 /* FirebaseFirestore */; };
 		FAB1716727709493004ACB90 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = FAB1716627709493004ACB90 /* FirebaseStorage */; };
 		FAB171692770952C004ACB90 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAB171682770952C004ACB90 /* GoogleService-Info.plist */; };
+		FAD6E4D72771B37E0029F418 /* SecureStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD6E4D62771B37E0029F418 /* SecureStorageService.swift */; };
+		FAD6E4DC2771B5370029F418 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD6E4DB2771B5370029F418 /* BaseViewController.swift */; };
+		FAD6E4DF2771B9530029F418 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD6E4DE2771B9530029F418 /* CustomTextField.swift */; };
+		FAD6E4E12771B9670029F418 /* CustomTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAD6E4E02771B9670029F418 /* CustomTextField.xib */; };
+		FAD6E4E42771B9EC0029F418 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD6E4E32771B9EC0029F418 /* UIViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +74,11 @@
 		FAB17146277093AB004ACB90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAB17148277093AB004ACB90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAB171682770952C004ACB90 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FAD6E4D62771B37E0029F418 /* SecureStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureStorageService.swift; sourceTree = "<group>"; };
+		FAD6E4DB2771B5370029F418 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		FAD6E4DE2771B9530029F418 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		FAD6E4E02771B9670029F418 /* CustomTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTextField.xib; sourceTree = "<group>"; };
+		FAD6E4E32771B9EC0029F418 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,6 +250,7 @@
 			children = (
 				FA3AE6262770CE57003543FD /* ServiceLocator.swift */,
 				FA3AE6282770CFB6003543FD /* AuthorizationService.swift */,
+				FAD6E4D62771B37E0029F418 /* SecureStorageService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -247,7 +258,10 @@
 		FA3AE62A2770D27F003543FD /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				FAD6E4E22771B9DA0029F418 /* Extensions */,
+				FAD6E4DD2771B8B20029F418 /* Views */,
 				FA3AE62B2770D289003543FD /* NetworkError.swift */,
+				FAD6E4DB2771B5370029F418 /* BaseViewController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -280,6 +294,23 @@
 				FAB171682770952C004ACB90 /* GoogleService-Info.plist */,
 			);
 			path = DeliveryApp;
+			sourceTree = "<group>";
+		};
+		FAD6E4DD2771B8B20029F418 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FAD6E4DE2771B9530029F418 /* CustomTextField.swift */,
+				FAD6E4E02771B9670029F418 /* CustomTextField.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FAD6E4E22771B9DA0029F418 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FAD6E4E32771B9EC0029F418 /* UIViewExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -354,6 +385,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAD6E4E12771B9670029F418 /* CustomTextField.xib in Resources */,
 				FAB17147277093AB004ACB90 /* LaunchScreen.storyboard in Resources */,
 				FAB171692770952C004ACB90 /* GoogleService-Info.plist in Resources */,
 				FAB17144277093AB004ACB90 /* Assets.xcassets in Resources */,
@@ -371,11 +403,13 @@
 				FA3AE60627709965003543FD /* LoginPresenterProtocol.swift in Sources */,
 				FA3AE6162770BEDF003543FD /* RegisterViewController.swift in Sources */,
 				FA3AE61E2770BF5B003543FD /* RegisterInteractorInput.swift in Sources */,
+				FAD6E4DC2771B5370029F418 /* BaseViewController.swift in Sources */,
 				FA3AE6202770BF76003543FD /* RegisterInteractor.swift in Sources */,
 				FA3AE60E277099DD003543FD /* LoginAssembly.swift in Sources */,
 				FA3AE600277098E6003543FD /* LoginViewController.swift in Sources */,
 				FAB1713B277093AA004ACB90 /* AppDelegate.swift in Sources */,
 				FA3AE61A2770BF1D003543FD /* RegisterPresenterProtocol.swift in Sources */,
+				FAD6E4D72771B37E0029F418 /* SecureStorageService.swift in Sources */,
 				FAB1713D277093AA004ACB90 /* SceneDelegate.swift in Sources */,
 				FA3AE6182770BEF5003543FD /* RegisterViewInput.swift in Sources */,
 				FA3AE60A277099AC003543FD /* LoginInteractor.swift in Sources */,
@@ -386,6 +420,8 @@
 				FA3AE62C2770D289003543FD /* NetworkError.swift in Sources */,
 				FA3AE6222770BF8D003543FD /* RegisterRouter.swift in Sources */,
 				FA3AE6272770CE57003543FD /* ServiceLocator.swift in Sources */,
+				FAD6E4E42771B9EC0029F418 /* UIViewExtension.swift in Sources */,
+				FAD6E4DF2771B9530029F418 /* CustomTextField.swift in Sources */,
 				FA3AE60827709993003543FD /* LoginInteractorInput.swift in Sources */,
 				FA3AE6242770BFA4003543FD /* RegisterAssembly.swift in Sources */,
 				FA3AE60427709950003543FD /* LoginPresenter.swift in Sources */,

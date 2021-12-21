@@ -9,4 +9,5 @@ import Foundation
 
 protocol RegisterPresenterProtocol: AnyObject {
     func signIn()
+    func createAccount(email: String, password: String)
 }

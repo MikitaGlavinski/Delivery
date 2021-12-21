@@ -39,7 +39,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func setupServiceLocator() {
         let authService = AuthorizationService()
+        let secureStorage = SecureStorageService()
         ServiceLocator.shared.addService(service: authService)
+        ServiceLocator.shared.addService(service: secureStorage)
     }
 
 

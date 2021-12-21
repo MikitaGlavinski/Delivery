@@ -29,9 +29,9 @@ extension RegisterPresenter: RegisterPresenterProtocol {
         accountCreator
             .observe(on: MainScheduler.instance)
             .subscribe(onSuccess: { token in
-                
+                self.interactor.saveToken(token: token)
             }, onFailure: { error in
-                
+                self.view.showError(error: error)
             }).disposed(by: disposeBag)
     }
 }
