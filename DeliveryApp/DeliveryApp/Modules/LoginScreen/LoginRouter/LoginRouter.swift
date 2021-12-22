@@ -14,7 +14,18 @@ class LoginRouter {
     
     func routeToRegisterScreen() {
         let registerView = RegisterAssembly.assemble()
-        registerView.modalPresentationStyle = .fullScreen
-        view.navigationController?.present(registerView, animated: true, completion: nil)
+        let transition = CATransition()
+        transition.duration = 0.5
+        transition.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
+        transition.type = .reveal
+        view.navigationController?.view.layer.add(transition, forKey: nil)
+        view.navigationController?.pushViewController(registerView, animated: true)
+    }
+    
+    func routeToHome() {
+        let homeView = HomeAssembly.assemble()
+        let tabBar = UITabBarController()
+        tabBar.setViewControllers([homeView], animated: true)
+        view.navigationController?.setViewControllers([homeView], animated: true)
     }
 }

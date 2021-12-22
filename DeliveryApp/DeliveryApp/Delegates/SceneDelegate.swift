@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FBSDKCoreKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -18,8 +19,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
-        let loginView = LoginAssembly.assemble()
-        let navigationController = UINavigationController(rootViewController: loginView)
+        
+        var rootViewController: UIViewController
+        let secureStorage = SecureStorageService()
+        if let _ = secureStorage.obtainToken() {
+            rootViewController = HomeAssembly.assemble()
+        } else {
+            rootViewController = LoginAssembly.assemble()
+        }
+        let navigationController = UINavigationController(rootViewController: rootViewController)
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
     }
@@ -50,6 +58,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Called as the scene transitions from the foreground to the background.
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
+    }
+    
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        guard let url = URLContexts.first?.url else { return }
+        ApplicationDelegate.shared.application(UIApplication.shared, open: url, sourceApplication: nil, annotation: [UIApplication.OpenURLOptionsKey.annotation])
     }
 
 

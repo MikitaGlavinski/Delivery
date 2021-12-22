@@ -9,4 +9,6 @@ import Foundation
 
 protocol LoginViewInput: AnyObject {
     func showError(error: Error)
+    func showLoader()
+    func hideLoader()
 }

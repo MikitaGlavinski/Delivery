@@ -17,10 +17,15 @@ class LoginAssembly {
         let interactor = LoginInteractor()
         let router = LoginRouter()
         
+        let authService: AuthorizationService? = ServiceLocator.shared.getService()
+        let secureStorage: SecureStorageService? = ServiceLocator.shared.getService()
+        
         view.presenter = presenter
         presenter.view = view
         presenter.interactor = interactor
         presenter.router = router
+        interactor.authService = authService
+        interactor.secureStorage = secureStorage
         router.view = view
         
         return view

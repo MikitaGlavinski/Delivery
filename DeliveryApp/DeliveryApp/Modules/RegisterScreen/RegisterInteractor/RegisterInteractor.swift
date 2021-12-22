@@ -5,7 +5,8 @@
 //  Created by Mikita Glavinski on 12/20/21.
 //
 
-import Foundation
+import UIKit
+import Firebase
 import RxSwift
 
 class RegisterInteractor {
@@ -23,5 +24,14 @@ extension RegisterInteractor: RegisterInteractorInput {
     
     func saveToken(token: String) {
         secureStorage.saveToken(token: token)
+    }
+    
+    func signInWithCredential(credential: AuthCredential) -> Single<String>? {
+        authService.signInWithCredential(credential: credential)
+            .subscribe(on: SerialDispatchQueueScheduler(qos: .background))
+    }
+    
+    func googleSignIn(presenting: UIViewController) -> Single<AuthCredential>? {
+        authService.googleSignIn(presenting: presenting)
     }
 }

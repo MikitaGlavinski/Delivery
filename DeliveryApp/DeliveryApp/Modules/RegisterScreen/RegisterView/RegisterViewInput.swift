@@ -9,4 +9,6 @@ import Foundation
 
 protocol RegisterViewInput: AnyObject {
     func showError(error: Error)
+    func showLoader()
+    func hideLoader()
 }

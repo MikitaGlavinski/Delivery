@@ -8,6 +8,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import FBSDKLoginKit
 
 class RegisterViewController: BaseViewController {
     
@@ -25,6 +26,12 @@ class RegisterViewController: BaseViewController {
     @IBOutlet weak var confirmPasswordLabel: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
     
+    private lazy var facebookButton: FBLoginButton = {
+        let button = FBLoginButton()
+        button.delegate = self
+        return button
+    }()
+    
     override func viewWillAppear(_ animated: Bool) {
         NotificationCenter.default.addObserver(self, selector: #selector(appearKeyboard), name: UIResponder.keyboardWillShowNotification, object: nil)
     }
@@ -40,8 +47,8 @@ class RegisterViewController: BaseViewController {
     
     private func setupGestures() {
         let mainTap = UITapGestureRecognizer()
-        mainTap.rx.event.bind(onNext: { _ in
-            self.view.endEditing(true)
+        mainTap.rx.event.bind(onNext: { [weak self] _ in
+            self?.view.endEditing(true)
         }).disposed(by: disposeBag)
         view.addGestureRecognizer(mainTap)
     }
@@ -132,9 +139,27 @@ class RegisterViewController: BaseViewController {
     }
     
     @IBAction func facebookSignIn(_ sender: UIButton) {
+        UIView.animate(withDuration: 0.1) {
+            sender.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+        } completion: { _ in
+            UIView.animate(withDuration: 0.1) {
+                sender.transform = .identity
+            } completion: { _ in
+                self.facebookButton.sendActions(for: .touchUpInside)
+            }
+        }
     }
     
     @IBAction func googleSignIn(_ sender: UIButton) {
+        UIView.animate(withDuration: 0.1) {
+            sender.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+        } completion: { _ in
+            UIView.animate(withDuration: 0.1) {
+                sender.transform = .identity
+            } completion: { _ in
+                self.presenter.googleSignIn(presenting: self)
+            }
+        }
     }
     
     @objc private func appearKeyboard(_ notification: Notification) {
@@ -148,4 +173,19 @@ class RegisterViewController: BaseViewController {
 
 extension RegisterViewController: RegisterViewInput {
     
+}
+
+extension RegisterViewController: LoginButtonDelegate {
+    func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?) {
+        if let error = error {
+            showError(error: error)
+            return
+        }
+        guard let token = AccessToken.current?.tokenString else { return }
+        presenter.faceBookSignIn(token: token)
+    }
+    
+    func loginButtonDidLogOut(_ loginButton: FBLoginButton) {
+        
+    }
 }

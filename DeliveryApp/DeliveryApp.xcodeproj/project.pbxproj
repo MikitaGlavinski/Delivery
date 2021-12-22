@@ -26,6 +26,17 @@
 		FA3AE6272770CE57003543FD /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3AE6262770CE57003543FD /* ServiceLocator.swift */; };
 		FA3AE6292770CFB6003543FD /* AuthorizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3AE6282770CFB6003543FD /* AuthorizationService.swift */; };
 		FA3AE62C2770D289003543FD /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3AE62B2770D289003543FD /* NetworkError.swift */; };
+		FAA5C1E32773093A007ED365 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA5C1E22773093A007ED365 /* HomeViewController.swift */; };
+		FAA5C1E527730953007ED365 /* HomeViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA5C1E427730953007ED365 /* HomeViewInput.swift */; };
+		FAA5C1E827730980007ED365 /* HomePresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA5C1E727730980007ED365 /* HomePresenterProtocol.swift */; };
+		FAA5C1EA2773099E007ED365 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA5C1E92773099E007ED365 /* HomePresenter.swift */; };
+		FAA5C1EC277309BD007ED365 /* HomeInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA5C1EB277309BD007ED365 /* HomeInteractorInput.swift */; };
+		FAA5C1EE277309D5007ED365 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA5C1ED277309D5007ED365 /* HomeInteractor.swift */; };
+		FAA5C1F0277309ED007ED365 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA5C1EF277309ED007ED365 /* HomeRouter.swift */; };
+		FAA5C1F227730A46007ED365 /* HomeAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA5C1F127730A46007ED365 /* HomeAssembly.swift */; };
+		FAA5C1F527731A66007ED365 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = FAA5C1F427731A66007ED365 /* GoogleSignIn */; };
+		FAA5C1F927732C92007ED365 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = FAA5C1F827732C92007ED365 /* FacebookLogin */; };
+		FAA5C1FC27733BC6007ED365 /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = FAA5C1FB27733BC6007ED365 /* FacebookCore */; };
 		FAB1713B277093AA004ACB90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB1713A277093AA004ACB90 /* AppDelegate.swift */; };
 		FAB1713D277093AA004ACB90 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB1713C277093AA004ACB90 /* SceneDelegate.swift */; };
 		FAB17142277093AA004ACB90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAB17140277093AA004ACB90 /* Main.storyboard */; };
@@ -66,6 +77,14 @@
 		FA3AE6262770CE57003543FD /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
 		FA3AE6282770CFB6003543FD /* AuthorizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationService.swift; sourceTree = "<group>"; };
 		FA3AE62B2770D289003543FD /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		FAA5C1E22773093A007ED365 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		FAA5C1E427730953007ED365 /* HomeViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewInput.swift; sourceTree = "<group>"; };
+		FAA5C1E727730980007ED365 /* HomePresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterProtocol.swift; sourceTree = "<group>"; };
+		FAA5C1E92773099E007ED365 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		FAA5C1EB277309BD007ED365 /* HomeInteractorInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorInput.swift; sourceTree = "<group>"; };
+		FAA5C1ED277309D5007ED365 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		FAA5C1EF277309ED007ED365 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		FAA5C1F127730A46007ED365 /* HomeAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAssembly.swift; sourceTree = "<group>"; };
 		FAB17137277093AA004ACB90 /* DeliveryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeliveryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAB1713A277093AA004ACB90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAB1713C277093AA004ACB90 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,9 +106,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAB17152277093E7004ACB90 /* RxCocoa in Frameworks */,
+				FAA5C1FC27733BC6007ED365 /* FacebookCore in Frameworks */,
+				FAA5C1F527731A66007ED365 /* GoogleSignIn in Frameworks */,
 				FAB1716727709493004ACB90 /* FirebaseStorage in Frameworks */,
 				FAB1715E27709432004ACB90 /* Alamofire in Frameworks */,
 				FAB17156277093E7004ACB90 /* RxSwift in Frameworks */,
+				FAA5C1F927732C92007ED365 /* FacebookLogin in Frameworks */,
 				FAB1716527709493004ACB90 /* FirebaseFirestore in Frameworks */,
 				FAB1716327709493004ACB90 /* FirebaseCrashlytics in Frameworks */,
 				FAB1716127709493004ACB90 /* FirebaseAuth in Frameworks */,
@@ -120,6 +142,7 @@
 		FA3AE5F72770980E003543FD /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				FAA5C1DC277308FD007ED365 /* HomeScreen */,
 				FA3AE60F2770BE6E003543FD /* RegisterScreen */,
 				FA3AE5F927709879003543FD /* LoginScreen */,
 			);
@@ -266,11 +289,74 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		FAA5C1DC277308FD007ED365 /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FAA5C1E127730926007ED365 /* HomeAssembly */,
+				FAA5C1E027730920007ED365 /* HomeRouter */,
+				FAA5C1DF27730916007ED365 /* HomeInteractor */,
+				FAA5C1DE2773090C007ED365 /* HomePresenter */,
+				FAA5C1DD27730905007ED365 /* HomeView */,
+			);
+			path = HomeScreen;
+			sourceTree = "<group>";
+		};
+		FAA5C1DD27730905007ED365 /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				FAA5C1E22773093A007ED365 /* HomeViewController.swift */,
+				FAA5C1E427730953007ED365 /* HomeViewInput.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		FAA5C1DE2773090C007ED365 /* HomePresenter */ = {
+			isa = PBXGroup;
+			children = (
+				FAA5C1E727730980007ED365 /* HomePresenterProtocol.swift */,
+				FAA5C1E92773099E007ED365 /* HomePresenter.swift */,
+			);
+			path = HomePresenter;
+			sourceTree = "<group>";
+		};
+		FAA5C1DF27730916007ED365 /* HomeInteractor */ = {
+			isa = PBXGroup;
+			children = (
+				FAA5C1EB277309BD007ED365 /* HomeInteractorInput.swift */,
+				FAA5C1ED277309D5007ED365 /* HomeInteractor.swift */,
+			);
+			path = HomeInteractor;
+			sourceTree = "<group>";
+		};
+		FAA5C1E027730920007ED365 /* HomeRouter */ = {
+			isa = PBXGroup;
+			children = (
+				FAA5C1EF277309ED007ED365 /* HomeRouter.swift */,
+			);
+			path = HomeRouter;
+			sourceTree = "<group>";
+		};
+		FAA5C1E127730926007ED365 /* HomeAssembly */ = {
+			isa = PBXGroup;
+			children = (
+				FAA5C1F127730A46007ED365 /* HomeAssembly.swift */,
+			);
+			path = HomeAssembly;
+			sourceTree = "<group>";
+		};
+		FAA5C1FA27733BC6007ED365 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FAB1712E277093AA004ACB90 = {
 			isa = PBXGroup;
 			children = (
 				FAB17139277093AA004ACB90 /* DeliveryApp */,
 				FAB17138277093AA004ACB90 /* Products */,
+				FAA5C1FA27733BC6007ED365 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -337,6 +423,9 @@
 				FAB1716227709493004ACB90 /* FirebaseCrashlytics */,
 				FAB1716427709493004ACB90 /* FirebaseFirestore */,
 				FAB1716627709493004ACB90 /* FirebaseStorage */,
+				FAA5C1F427731A66007ED365 /* GoogleSignIn */,
+				FAA5C1F827732C92007ED365 /* FacebookLogin */,
+				FAA5C1FB27733BC6007ED365 /* FacebookCore */,
 			);
 			productName = DeliveryApp;
 			productReference = FAB17137277093AA004ACB90 /* DeliveryApp.app */;
@@ -370,6 +459,8 @@
 				FAB1714E277093E7004ACB90 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				FAB1715C27709432004ACB90 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				FAB1715F27709493004ACB90 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				FAA5C1F327731A66007ED365 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				FAA5C1F727732C91007ED365 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
 			);
 			productRefGroup = FAB17138277093AA004ACB90 /* Products */;
 			projectDirPath = "";
@@ -401,20 +492,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA3AE60627709965003543FD /* LoginPresenterProtocol.swift in Sources */,
+				FAA5C1E827730980007ED365 /* HomePresenterProtocol.swift in Sources */,
 				FA3AE6162770BEDF003543FD /* RegisterViewController.swift in Sources */,
+				FAA5C1F227730A46007ED365 /* HomeAssembly.swift in Sources */,
+				FAA5C1E527730953007ED365 /* HomeViewInput.swift in Sources */,
+				FAA5C1EA2773099E007ED365 /* HomePresenter.swift in Sources */,
 				FA3AE61E2770BF5B003543FD /* RegisterInteractorInput.swift in Sources */,
+				FAA5C1EC277309BD007ED365 /* HomeInteractorInput.swift in Sources */,
 				FAD6E4DC2771B5370029F418 /* BaseViewController.swift in Sources */,
 				FA3AE6202770BF76003543FD /* RegisterInteractor.swift in Sources */,
 				FA3AE60E277099DD003543FD /* LoginAssembly.swift in Sources */,
+				FAA5C1EE277309D5007ED365 /* HomeInteractor.swift in Sources */,
 				FA3AE600277098E6003543FD /* LoginViewController.swift in Sources */,
 				FAB1713B277093AA004ACB90 /* AppDelegate.swift in Sources */,
 				FA3AE61A2770BF1D003543FD /* RegisterPresenterProtocol.swift in Sources */,
 				FAD6E4D72771B37E0029F418 /* SecureStorageService.swift in Sources */,
 				FAB1713D277093AA004ACB90 /* SceneDelegate.swift in Sources */,
+				FAA5C1E32773093A007ED365 /* HomeViewController.swift in Sources */,
 				FA3AE6182770BEF5003543FD /* RegisterViewInput.swift in Sources */,
 				FA3AE60A277099AC003543FD /* LoginInteractor.swift in Sources */,
 				FA3AE6292770CFB6003543FD /* AuthorizationService.swift in Sources */,
 				FA3AE61C2770BF33003543FD /* RegisterPresenter.swift in Sources */,
+				FAA5C1F0277309ED007ED365 /* HomeRouter.swift in Sources */,
 				FA3AE60C277099C6003543FD /* LoginRouter.swift in Sources */,
 				FA3AE60227709926003543FD /* LoginViewInput.swift in Sources */,
 				FA3AE62C2770D289003543FD /* NetworkError.swift in Sources */,
@@ -648,6 +747,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		FAA5C1F327731A66007ED365 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+		FAA5C1F727732C91007ED365 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.0.0;
+			};
+		};
 		FAB1714E277093E7004ACB90 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift";
@@ -675,6 +790,21 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		FAA5C1F427731A66007ED365 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FAA5C1F327731A66007ED365 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		FAA5C1F827732C92007ED365 /* FacebookLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FAA5C1F727732C91007ED365 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookLogin;
+		};
+		FAA5C1FB27733BC6007ED365 /* FacebookCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FAA5C1F727732C91007ED365 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookCore;
+		};
 		FAB17151277093E7004ACB90 /* RxCocoa */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FAB1714E277093E7004ACB90 /* XCRemoteSwiftPackageReference "RxSwift" */;

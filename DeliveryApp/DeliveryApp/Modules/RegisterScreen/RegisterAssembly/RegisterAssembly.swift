@@ -17,8 +17,8 @@ class RegisterAssembly {
         let interactor = RegisterInteractor()
         let router = RegisterRouter()
         
-        let authService: AuthorizationService! = ServiceLocator.shared.getService()
-        let secureStorage: SecureStorageService! = ServiceLocator.shared.getService()
+        let authService: AuthorizationService? = ServiceLocator.shared.getService()
+        let secureStorage: SecureStorageService? = ServiceLocator.shared.getService()
         
         view.presenter = presenter
         presenter.view = view
