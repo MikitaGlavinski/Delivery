@@ -10,6 +10,8 @@ import Foundation
 protocol SecureStorageServiceProtocol {
     func saveToken(token: String)
     func obtainToken() -> String?
+    func saveOnboardingFlag()
+    func obtainOnboardingFlag() -> String?
 }
 
 class SecureStorageService: SecureStorageServiceProtocol {
@@ -22,5 +24,13 @@ class SecureStorageService: SecureStorageServiceProtocol {
     
     func obtainToken() -> String? {
         storage.string(forKey: "token")
+    }
+    
+    func saveOnboardingFlag() {
+        storage.setValue("yes", forKey: "onBoarding")
+    }
+    
+    func obtainOnboardingFlag() -> String? {
+        storage.string(forKey: "onBoarding")
     }
 }

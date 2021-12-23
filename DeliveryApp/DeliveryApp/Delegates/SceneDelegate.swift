@@ -22,10 +22,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         var rootViewController: UIViewController
         let secureStorage = SecureStorageService()
-        if let _ = secureStorage.obtainToken() {
-            rootViewController = HomeAssembly.assemble()
+        if let _ = secureStorage.obtainOnboardingFlag() {
+            if let _ = secureStorage.obtainToken() {
+                let homeView = HomeAssembly.assemble()
+                let tabBarController = UITabBarController()
+                tabBarController.tabBar.tintColor = UIColor(red: 34/255, green: 164/255, blue: 97/255, alpha: 1)
+                tabBarController.setViewControllers([homeView], animated: true)
+                rootViewController = tabBarController
+            } else {
+                rootViewController = LoginAssembly.assemble()
+            }
         } else {
-            rootViewController = LoginAssembly.assemble()
+            rootViewController = OnboardingAssembly.assemble()
         }
         let navigationController = UINavigationController(rootViewController: rootViewController)
         window?.rootViewController = navigationController

@@ -25,7 +25,8 @@ class LoginRouter {
     func routeToHome() {
         let homeView = HomeAssembly.assemble()
         let tabBar = UITabBarController()
+        tabBar.tabBar.tintColor = .systemGreen
         tabBar.setViewControllers([homeView], animated: true)
-        view.navigationController?.setViewControllers([homeView], animated: true)
+        view.navigationController?.setViewControllers([tabBar], animated: true)
     }
 }
