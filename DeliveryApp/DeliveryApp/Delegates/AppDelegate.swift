@@ -48,8 +48,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func setupServiceLocator() {
         let authService = AuthorizationService()
         let secureStorage = SecureStorageService()
+        let firebaseService = FirebaseService()
         ServiceLocator.shared.addService(service: authService)
         ServiceLocator.shared.addService(service: secureStorage)
+        ServiceLocator.shared.addService(service: firebaseService)
     }
 
 

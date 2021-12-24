@@ -6,11 +6,16 @@
 //
 
 import Foundation
+import RxSwift
 
 class HomeInteractor {
-    
+    var firebaseService: FirebaseServiceProtocol!
 }
 
 extension HomeInteractor: HomeInteractorInput {
     
+    func getPlaces() -> Single<[PlaceModel]>? {
+        firebaseService.getPlaces()
+            .subscribe(on: SerialDispatchQueueScheduler(qos: .background))
+    }
 }

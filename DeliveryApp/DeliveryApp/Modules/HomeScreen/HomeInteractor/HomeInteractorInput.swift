@@ -6,7 +6,8 @@
 //
 
 import Foundation
+import RxSwift
 
 protocol HomeInteractorInput {
-    
+    func getPlaces() -> Single<[PlaceModel]>?
 }

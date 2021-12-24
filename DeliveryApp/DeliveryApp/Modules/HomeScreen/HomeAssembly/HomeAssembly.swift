@@ -17,10 +17,13 @@ class HomeAssembly {
         let interactor = HomeInteractor()
         let router = HomeRouter()
         
+        let firebaseService: FirebaseService? = ServiceLocator.shared.getService()
+        
         view.presenter = presenter
         presenter.view = view
         presenter.interactor = interactor
         presenter.router = router
+        interactor.firebaseService = firebaseService
         router.view = view
         
         return view
