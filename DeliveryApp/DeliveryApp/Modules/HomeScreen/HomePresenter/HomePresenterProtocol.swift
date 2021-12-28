@@ -10,3 +10,7 @@ import Foundation
 protocol HomePresenterProtocol: AnyObject {
     func viewDidLoad()
 }
+
+protocol MainTableViewDelegate: AnyObject {
+    
+}

@@ -8,12 +8,12 @@
 import UIKit
 
 struct FeturedTableCellModel: TableViewCompatible {
-    
+    var name: String
     var places: [PlaceModel]
     
     var reuseIdentifier: String = "FeaturedPlaces"
     
-    func cellForTableView(tableView: UITableView, delegate: HomePresenterProtocol) -> UITableViewCell {
+    func cellForTableView(tableView: UITableView, delegate: MainTableViewDelegate?) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier) as! FeaturedPlacesTableViewCell
         cell.configureCell(with: self)
         return cell

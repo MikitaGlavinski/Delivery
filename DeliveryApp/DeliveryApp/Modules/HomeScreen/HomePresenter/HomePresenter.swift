@@ -21,8 +21,13 @@ class HomePresenter {
         var cellModels = [TableViewCompatible]()
         let place = placeModels[2]
         cellModels.append(FirstPlaceTableCellModel(placeId: place.id, images: place.images))
-        cellModels.append(FeturedTableCellModel(places: placeModels))
-        cellModels.append(FeturedTableCellModel(places: placeModels))
+        cellModels.append(FeturedTableCellModel(name: "Featured Partners", places: placeModels))
+        cellModels.append(InfoCellModel())
+        cellModels.append(FeturedTableCellModel(name: "Best Pick", places: placeModels))
+        cellModels.append(TitleCellModel(title: "All Restaurants"))
+        for onePlace in placeModels {
+            cellModels.append(RestaurantCellModel(place: onePlace))
+        }
         view.setupTableView(models: cellModels)
     }
 }
@@ -43,4 +48,8 @@ extension HomePresenter: HomePresenterProtocol {
                 self?.view.showError(error: error)
             }).disposed(by: disposeBag)
     }
+}
+
+extension HomePresenter: MainTableViewDelegate {
+    
 }

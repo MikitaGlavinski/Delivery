@@ -14,5 +14,5 @@ protocol Configurable {
 
 protocol TableViewCompatible {
     var reuseIdentifier: String { get }
-    func cellForTableView(tableView: UITableView, delegate: HomePresenterProtocol) -> UITableViewCell
+    func cellForTableView(tableView: UITableView, delegate: MainTableViewDelegate?) -> UITableViewCell
 }

@@ -55,7 +55,6 @@ class FirebaseService: FirebaseServiceProtocol {
                     return
                 }
                 do {
-                    print(snapshot.documents.first?.data())
                     let decoder = DictionaryDecoder()
                     let models = try snapshot.documents.compactMap({try decoder.decode($0.data(), decodeType: decodeType)})
                     observer(.success(models))

@@ -31,11 +31,11 @@ class CustomTextField: UIView {
         guard let view = loadFromNib(nibName: "CustomTextField") else { return }
         view.frame = bounds
         addSubview(view)
-        
+
         view.layer.borderWidth = 1.0
         view.layer.borderColor = UIColor.lightGray.cgColor
         view.layer.cornerRadius = 5.0
-        
+
         textField.delegate = self
     }
     

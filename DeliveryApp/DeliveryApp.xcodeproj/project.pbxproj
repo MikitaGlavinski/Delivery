@@ -26,11 +26,12 @@
 		FA3AE6272770CE57003543FD /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3AE6262770CE57003543FD /* ServiceLocator.swift */; };
 		FA3AE6292770CFB6003543FD /* AuthorizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3AE6282770CFB6003543FD /* AuthorizationService.swift */; };
 		FA3AE62C2770D289003543FD /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3AE62B2770D289003543FD /* NetworkError.swift */; };
+		FA4D16A0277AFB76002C6AB0 /* CustomSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4D169F277AFB76002C6AB0 /* CustomSearchBar.swift */; };
+		FA4D16A2277AFB88002C6AB0 /* CustomSearchBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA4D16A1277AFB88002C6AB0 /* CustomSearchBar.xib */; };
 		FA62164C2775AD9E00144DCE /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62164B2775AD9E00144DCE /* PlaceModel.swift */; };
 		FA62164E2775B00C00144DCE /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62164D2775B00C00144DCE /* FirebaseService.swift */; };
 		FA6216502775B2F600144DCE /* DictionaryHelpper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62164F2775B2F600144DCE /* DictionaryHelpper.swift */; };
 		FA6216532775C5FB00144DCE /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = FA6216522775C5FB00144DCE /* Kingfisher */; };
-		FA6216562775D11F00144DCE /* FirstPlaceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6216552775D11F00144DCE /* FirstPlaceCollectionViewCell.swift */; };
 		FA6216582775D18000144DCE /* CellProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6216572775D18000144DCE /* CellProtocols.swift */; };
 		FA62165A2775D31800144DCE /* FirstPlaceTableCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6216592775D31800144DCE /* FirstPlaceTableCellModel.swift */; };
 		FA62165C277600A400144DCE /* FeaturedPlacesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62165B277600A400144DCE /* FeaturedPlacesTableViewCell.swift */; };
@@ -77,6 +78,23 @@
 		FAD6E4E12771B9670029F418 /* CustomTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAD6E4E02771B9670029F418 /* CustomTextField.xib */; };
 		FAD6E4E42771B9EC0029F418 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD6E4E32771B9EC0029F418 /* UIViewExtension.swift */; };
 		FAEB4C232774A09800ABC8FD /* FirstPlaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEB4C222774A09800ABC8FD /* FirstPlaceTableViewCell.swift */; };
+		FAF467F92779B44F006044FB /* InfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF467F82779B44F006044FB /* InfoTableViewCell.swift */; };
+		FAF467FB2779B4AE006044FB /* InfoCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF467FA2779B4AE006044FB /* InfoCellModel.swift */; };
+		FAF468032779BD20006044FB /* RestaurantCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF468022779BD20006044FB /* RestaurantCellModel.swift */; };
+		FAF4680E2779D3FE006044FB /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF4680D2779D3FE006044FB /* TitleTableViewCell.swift */; };
+		FAF468102779D41C006044FB /* TitleCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF4680F2779D41C006044FB /* TitleCellModel.swift */; };
+		FAF468182779E315006044FB /* SearchViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF468172779E315006044FB /* SearchViewInput.swift */; };
+		FAF4681A2779E324006044FB /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF468192779E324006044FB /* SearchViewController.swift */; };
+		FAF4681C2779E330006044FB /* SearchPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF4681B2779E330006044FB /* SearchPresenterProtocol.swift */; };
+		FAF4681E2779E33A006044FB /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF4681D2779E33A006044FB /* SearchPresenter.swift */; };
+		FAF468202779E345006044FB /* SearchInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF4681F2779E345006044FB /* SearchInteractorInput.swift */; };
+		FAF468222779E350006044FB /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF468212779E350006044FB /* SearchInteractor.swift */; };
+		FAF468242779E359006044FB /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF468232779E359006044FB /* SearchRouter.swift */; };
+		FAF468262779E363006044FB /* SearchAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF468252779E363006044FB /* SearchAssembly.swift */; };
+		FAF468292779E994006044FB /* TestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF468272779E994006044FB /* TestTableViewCell.swift */; };
+		FAF4682A2779E994006044FB /* TestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF468282779E994006044FB /* TestTableViewCell.xib */; };
+		FAF4682F2779EC27006044FB /* TestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF4682D2779EC27006044FB /* TestCollectionViewCell.swift */; };
+		FAF468302779EC27006044FB /* TestCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF4682E2779EC27006044FB /* TestCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -99,10 +117,11 @@
 		FA3AE6262770CE57003543FD /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
 		FA3AE6282770CFB6003543FD /* AuthorizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationService.swift; sourceTree = "<group>"; };
 		FA3AE62B2770D289003543FD /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		FA4D169F277AFB76002C6AB0 /* CustomSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSearchBar.swift; sourceTree = "<group>"; };
+		FA4D16A1277AFB88002C6AB0 /* CustomSearchBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomSearchBar.xib; sourceTree = "<group>"; };
 		FA62164B2775AD9E00144DCE /* PlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
 		FA62164D2775B00C00144DCE /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		FA62164F2775B2F600144DCE /* DictionaryHelpper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryHelpper.swift; sourceTree = "<group>"; };
-		FA6216552775D11F00144DCE /* FirstPlaceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPlaceCollectionViewCell.swift; sourceTree = "<group>"; };
 		FA6216572775D18000144DCE /* CellProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellProtocols.swift; sourceTree = "<group>"; };
 		FA6216592775D31800144DCE /* FirstPlaceTableCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPlaceTableCellModel.swift; sourceTree = "<group>"; };
 		FA62165B277600A400144DCE /* FeaturedPlacesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedPlacesTableViewCell.swift; sourceTree = "<group>"; };
@@ -141,6 +160,23 @@
 		FAD6E4E02771B9670029F418 /* CustomTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTextField.xib; sourceTree = "<group>"; };
 		FAD6E4E32771B9EC0029F418 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		FAEB4C222774A09800ABC8FD /* FirstPlaceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPlaceTableViewCell.swift; sourceTree = "<group>"; };
+		FAF467F82779B44F006044FB /* InfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewCell.swift; sourceTree = "<group>"; };
+		FAF467FA2779B4AE006044FB /* InfoCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCellModel.swift; sourceTree = "<group>"; };
+		FAF468022779BD20006044FB /* RestaurantCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCellModel.swift; sourceTree = "<group>"; };
+		FAF4680D2779D3FE006044FB /* TitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCell.swift; sourceTree = "<group>"; };
+		FAF4680F2779D41C006044FB /* TitleCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCellModel.swift; sourceTree = "<group>"; };
+		FAF468172779E315006044FB /* SearchViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewInput.swift; sourceTree = "<group>"; };
+		FAF468192779E324006044FB /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		FAF4681B2779E330006044FB /* SearchPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenterProtocol.swift; sourceTree = "<group>"; };
+		FAF4681D2779E33A006044FB /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
+		FAF4681F2779E345006044FB /* SearchInteractorInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractorInput.swift; sourceTree = "<group>"; };
+		FAF468212779E350006044FB /* SearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
+		FAF468232779E359006044FB /* SearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouter.swift; sourceTree = "<group>"; };
+		FAF468252779E363006044FB /* SearchAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAssembly.swift; sourceTree = "<group>"; };
+		FAF468272779E994006044FB /* TestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableViewCell.swift; sourceTree = "<group>"; };
+		FAF468282779E994006044FB /* TestTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestTableViewCell.xib; sourceTree = "<group>"; };
+		FAF4682D2779EC27006044FB /* TestCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCollectionViewCell.swift; sourceTree = "<group>"; };
+		FAF4682E2779EC27006044FB /* TestCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +222,7 @@
 		FA3AE5F72770980E003543FD /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				FAF468112779E2DA006044FB /* SearchScreen */,
 				FAA5C1FD27735013007ED365 /* OnboardingScreen */,
 				FAA5C1DC277308FD007ED365 /* HomeScreen */,
 				FA3AE60F2770BE6E003543FD /* RegisterScreen */,
@@ -347,8 +384,9 @@
 		FA6216542775D0FA00144DCE /* CollectionViewCells */ = {
 			isa = PBXGroup;
 			children = (
-				FA6216552775D11F00144DCE /* FirstPlaceCollectionViewCell.swift */,
 				FA62165D2776011600144DCE /* DetailPlaceCollectionViewCell.swift */,
+				FAF4682D2779EC27006044FB /* TestCollectionViewCell.swift */,
+				FAF4682E2779EC27006044FB /* TestCollectionViewCell.xib */,
 			);
 			path = CollectionViewCells;
 			sourceTree = "<group>";
@@ -519,6 +557,8 @@
 				FAD6E4DE2771B9530029F418 /* CustomTextField.swift */,
 				FAD6E4E02771B9670029F418 /* CustomTextField.xib */,
 				FAA5C217277356D5007ED365 /* CustomPageControl.swift */,
+				FA4D169F277AFB76002C6AB0 /* CustomSearchBar.swift */,
+				FA4D16A1277AFB88002C6AB0 /* CustomSearchBar.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -546,6 +586,10 @@
 			children = (
 				FAEB4C222774A09800ABC8FD /* FirstPlaceTableViewCell.swift */,
 				FA62165B277600A400144DCE /* FeaturedPlacesTableViewCell.swift */,
+				FAF467F82779B44F006044FB /* InfoTableViewCell.swift */,
+				FAF4680D2779D3FE006044FB /* TitleTableViewCell.swift */,
+				FAF468272779E994006044FB /* TestTableViewCell.swift */,
+				FAF468282779E994006044FB /* TestTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -556,8 +600,66 @@
 				FA6216572775D18000144DCE /* CellProtocols.swift */,
 				FA6216592775D31800144DCE /* FirstPlaceTableCellModel.swift */,
 				FA62165F2776087C00144DCE /* FeturedTableCellModel.swift */,
+				FAF467FA2779B4AE006044FB /* InfoCellModel.swift */,
+				FAF468022779BD20006044FB /* RestaurantCellModel.swift */,
+				FAF4680F2779D41C006044FB /* TitleCellModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		FAF468112779E2DA006044FB /* SearchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FAF468162779E300006044FB /* SearchAssembly */,
+				FAF468152779E2F9006044FB /* SearchRouter */,
+				FAF468142779E2EF006044FB /* SearchInteractor */,
+				FAF468132779E2E8006044FB /* SearchPresenter */,
+				FAF468122779E2E2006044FB /* SearchView */,
+			);
+			path = SearchScreen;
+			sourceTree = "<group>";
+		};
+		FAF468122779E2E2006044FB /* SearchView */ = {
+			isa = PBXGroup;
+			children = (
+				FAF468172779E315006044FB /* SearchViewInput.swift */,
+				FAF468192779E324006044FB /* SearchViewController.swift */,
+			);
+			path = SearchView;
+			sourceTree = "<group>";
+		};
+		FAF468132779E2E8006044FB /* SearchPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				FAF4681B2779E330006044FB /* SearchPresenterProtocol.swift */,
+				FAF4681D2779E33A006044FB /* SearchPresenter.swift */,
+			);
+			path = SearchPresenter;
+			sourceTree = "<group>";
+		};
+		FAF468142779E2EF006044FB /* SearchInteractor */ = {
+			isa = PBXGroup;
+			children = (
+				FAF4681F2779E345006044FB /* SearchInteractorInput.swift */,
+				FAF468212779E350006044FB /* SearchInteractor.swift */,
+			);
+			path = SearchInteractor;
+			sourceTree = "<group>";
+		};
+		FAF468152779E2F9006044FB /* SearchRouter */ = {
+			isa = PBXGroup;
+			children = (
+				FAF468232779E359006044FB /* SearchRouter.swift */,
+			);
+			path = SearchRouter;
+			sourceTree = "<group>";
+		};
+		FAF468162779E300006044FB /* SearchAssembly */ = {
+			isa = PBXGroup;
+			children = (
+				FAF468252779E363006044FB /* SearchAssembly.swift */,
+			);
+			path = SearchAssembly;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -639,9 +741,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAF468302779EC27006044FB /* TestCollectionViewCell.xib in Resources */,
 				FAD6E4E12771B9670029F418 /* CustomTextField.xib in Resources */,
+				FA4D16A2277AFB88002C6AB0 /* CustomSearchBar.xib in Resources */,
 				FAB17147277093AB004ACB90 /* LaunchScreen.storyboard in Resources */,
 				FAB171692770952C004ACB90 /* GoogleService-Info.plist in Resources */,
+				FAF4682A2779E994006044FB /* TestTableViewCell.xib in Resources */,
 				FAB17144277093AB004ACB90 /* Assets.xcassets in Resources */,
 				FAB17142277093AA004ACB90 /* Main.storyboard in Resources */,
 			);
@@ -656,6 +761,7 @@
 			files = (
 				FAA5C20C277350D6007ED365 /* OnboardingInteractorInput.swift in Sources */,
 				FA62165E2776011600144DCE /* DetailPlaceCollectionViewCell.swift in Sources */,
+				FA4D16A0277AFB76002C6AB0 /* CustomSearchBar.swift in Sources */,
 				FA3AE60627709965003543FD /* LoginPresenterProtocol.swift in Sources */,
 				FAA5C1E827730980007ED365 /* HomePresenterProtocol.swift in Sources */,
 				FA3AE6162770BEDF003543FD /* RegisterViewController.swift in Sources */,
@@ -664,23 +770,31 @@
 				FAA5C21027735108007ED365 /* OnboardingRouter.swift in Sources */,
 				FAA5C1F227730A46007ED365 /* HomeAssembly.swift in Sources */,
 				FAA5C1E527730953007ED365 /* HomeViewInput.swift in Sources */,
+				FAF4682F2779EC27006044FB /* TestCollectionViewCell.swift in Sources */,
 				FAA5C1EA2773099E007ED365 /* HomePresenter.swift in Sources */,
 				FA3AE61E2770BF5B003543FD /* RegisterInteractorInput.swift in Sources */,
+				FAF468032779BD20006044FB /* RestaurantCellModel.swift in Sources */,
 				FAA5C1EC277309BD007ED365 /* HomeInteractorInput.swift in Sources */,
+				FAF468102779D41C006044FB /* TitleCellModel.swift in Sources */,
 				FAA5C21F277365F5007ED365 /* OnboardingCellViewModel.swift in Sources */,
 				FAA5C218277356D5007ED365 /* CustomPageControl.swift in Sources */,
 				FAA5C20A277350B3007ED365 /* OnboardingPresenter.swift in Sources */,
+				FAF468222779E350006044FB /* SearchInteractor.swift in Sources */,
 				FAD6E4DC2771B5370029F418 /* BaseViewController.swift in Sources */,
+				FAF468292779E994006044FB /* TestTableViewCell.swift in Sources */,
 				FA3AE6202770BF76003543FD /* RegisterInteractor.swift in Sources */,
+				FAF4681C2779E330006044FB /* SearchPresenterProtocol.swift in Sources */,
 				FAA5C208277350A1007ED365 /* OnboardingPresenterProtocol.swift in Sources */,
 				FA62164C2775AD9E00144DCE /* PlaceModel.swift in Sources */,
 				FA3AE60E277099DD003543FD /* LoginAssembly.swift in Sources */,
 				FAA5C1EE277309D5007ED365 /* HomeInteractor.swift in Sources */,
+				FAF4680E2779D3FE006044FB /* TitleTableViewCell.swift in Sources */,
 				FA3AE600277098E6003543FD /* LoginViewController.swift in Sources */,
 				FA62165A2775D31800144DCE /* FirstPlaceTableCellModel.swift in Sources */,
 				FAB1713B277093AA004ACB90 /* AppDelegate.swift in Sources */,
 				FA3AE61A2770BF1D003543FD /* RegisterPresenterProtocol.swift in Sources */,
 				FAA5C20627735077007ED365 /* OnboardingViewInput.swift in Sources */,
+				FAF467FB2779B4AE006044FB /* InfoCellModel.swift in Sources */,
 				FAD6E4D72771B37E0029F418 /* SecureStorageService.swift in Sources */,
 				FAB1713D277093AA004ACB90 /* SceneDelegate.swift in Sources */,
 				FAA5C1E32773093A007ED365 /* HomeViewController.swift in Sources */,
@@ -688,6 +802,7 @@
 				FA3AE60A277099AC003543FD /* LoginInteractor.swift in Sources */,
 				FA3AE6292770CFB6003543FD /* AuthorizationService.swift in Sources */,
 				FA3AE61C2770BF33003543FD /* RegisterPresenter.swift in Sources */,
+				FAF4681A2779E324006044FB /* SearchViewController.swift in Sources */,
 				FA62165C277600A400144DCE /* FeaturedPlacesTableViewCell.swift in Sources */,
 				FAEB4C232774A09800ABC8FD /* FirstPlaceTableViewCell.swift in Sources */,
 				FAA5C1F0277309ED007ED365 /* HomeRouter.swift in Sources */,
@@ -695,9 +810,12 @@
 				FA3AE60227709926003543FD /* LoginViewInput.swift in Sources */,
 				FA3AE62C2770D289003543FD /* NetworkError.swift in Sources */,
 				FA3AE6222770BF8D003543FD /* RegisterRouter.swift in Sources */,
+				FAF468242779E359006044FB /* SearchRouter.swift in Sources */,
+				FAF468262779E363006044FB /* SearchAssembly.swift in Sources */,
+				FAF467F92779B44F006044FB /* InfoTableViewCell.swift in Sources */,
 				FA3AE6272770CE57003543FD /* ServiceLocator.swift in Sources */,
 				FAD6E4E42771B9EC0029F418 /* UIViewExtension.swift in Sources */,
-				FA6216562775D11F00144DCE /* FirstPlaceCollectionViewCell.swift in Sources */,
+				FAF468202779E345006044FB /* SearchInteractorInput.swift in Sources */,
 				FA6216602776087C00144DCE /* FeturedTableCellModel.swift in Sources */,
 				FA6216502775B2F600144DCE /* DictionaryHelpper.swift in Sources */,
 				FAD6E4DF2771B9530029F418 /* CustomTextField.swift in Sources */,
@@ -706,7 +824,9 @@
 				FAA5C21227735155007ED365 /* OnboardingAssembly.swift in Sources */,
 				FA3AE60827709993003543FD /* LoginInteractorInput.swift in Sources */,
 				FA3AE6242770BFA4003543FD /* RegisterAssembly.swift in Sources */,
+				FAF468182779E315006044FB /* SearchViewInput.swift in Sources */,
 				FA3AE60427709950003543FD /* LoginPresenter.swift in Sources */,
+				FAF4681E2779E33A006044FB /* SearchPresenter.swift in Sources */,
 				FAA5C20E277350E9007ED365 /* OnboardingInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

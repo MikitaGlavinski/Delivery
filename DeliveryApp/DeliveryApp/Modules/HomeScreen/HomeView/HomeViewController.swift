@@ -26,6 +26,7 @@ class HomeViewController: BaseViewController {
     }
     
     private func setupUI() {
+        tableView.register(UINib(nibName: "TestTableViewCell", bundle: nil), forCellReuseIdentifier: "Test")
         tableView.dataSource = self
         tableView.delegate = self
     }
@@ -46,12 +47,10 @@ extension HomeViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let model = cellModels[indexPath.row]
-        return model.cellForTableView(tableView: tableView, delegate: presenter)
+        return model.cellForTableView(tableView: tableView, delegate: nil)
     }
 }
 
 extension HomeViewController: UITableViewDelegate {
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 220
-//    }
+
 }

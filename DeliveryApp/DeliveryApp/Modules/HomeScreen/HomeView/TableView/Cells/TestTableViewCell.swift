@@ -1,24 +1,43 @@
 //
-//  FirstPlaceTableViewCell.swift
+//  TestTableViewCell.swift
 //  DeliveryApp
 //
-//  Created by Mikita Glavinski on 12/23/21.
+//  Created by Mikita Glavinski on 12/27/21.
 //
 
 import UIKit
 
-class FirstPlaceTableViewCell: UITableViewCell, Configurable {
+class TestTableViewCell: UITableViewCell, Configurable {
 
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var pageControl: CustomPageControl!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var firstFoodTypeLabel: UILabel!
+    @IBOutlet weak var secondFoodTypeLabel: UILabel!
+    @IBOutlet weak var ratingLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
     
-    private var placeId: String!
-    private var images: [String] = [String]() {
+    private var placeModel: PlaceModel! {
         didSet {
             collectionView.reloadData()
+            nameLabel.text = placeModel.name
+            firstFoodTypeLabel.text = placeModel.foodType[0]
+            secondFoodTypeLabel.text = placeModel.foodType[1]
+            ratingLabel.text = String(placeModel.rating)
+            timeLabel.text = "\(placeModel.deliveryTime) Min"
+            priceLabel.text = ""
+            for _ in 0..<placeModel.price {
+                priceLabel.text! += "$"
+            }
         }
     }
-    weak var delegate: MainTableViewDelegate!
+    
+    func configureCell(with model: RestaurantCellModel) {
+        setupUI()
+        placeModel = model.place
+        collectionView.layer.cornerRadius = 20
+    }
     
     private func setupUI() {
         collectionView.register(UINib(nibName: "TestCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "Test")
@@ -26,28 +45,22 @@ class FirstPlaceTableViewCell: UITableViewCell, Configurable {
         collectionView.delegate = self
         collectionView.layer.cornerRadius = 20
     }
-    
-    func configureCell(with model: FirstPlaceTableCellModel) {
-        setupUI()
-        placeId = model.placeId
-        images = model.images
-    }
 }
 
-extension FirstPlaceTableViewCell: UICollectionViewDataSource {
+extension TestTableViewCell: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return images.count
+        placeModel.images.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Test", for: indexPath) as! TestCollectionViewCell
-        cell.configureCell(with: images[indexPath.item])
+        cell.configureCell(with: placeModel.images[indexPath.item])
         return cell
     }
 }
 
-extension FirstPlaceTableViewCell: UICollectionViewDelegateFlowLayout {
+extension TestTableViewCell: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)

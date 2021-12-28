@@ -13,7 +13,7 @@ struct FirstPlaceTableCellModel: TableViewCompatible {
     
     var reuseIdentifier: String = "FirstPlace"
     
-    func cellForTableView(tableView: UITableView, delegate: HomePresenterProtocol) -> UITableViewCell {
+    func cellForTableView(tableView: UITableView, delegate: MainTableViewDelegate?) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier) as! FirstPlaceTableViewCell
         cell.delegate = delegate
         cell.configureCell(with: self)

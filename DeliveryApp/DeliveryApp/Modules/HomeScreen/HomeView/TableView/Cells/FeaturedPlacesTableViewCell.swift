@@ -10,6 +10,7 @@ import UIKit
 class FeaturedPlacesTableViewCell: UITableViewCell, Configurable {
     
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var nameLabel: UILabel!
     
     private var placeModels = [PlaceModel]() {
         didSet {
@@ -24,6 +25,7 @@ class FeaturedPlacesTableViewCell: UITableViewCell, Configurable {
     
     func configureCell(with model: FeturedTableCellModel) {
         setupUI()
+        nameLabel.text = model.name
         placeModels = model.places
     }
 }

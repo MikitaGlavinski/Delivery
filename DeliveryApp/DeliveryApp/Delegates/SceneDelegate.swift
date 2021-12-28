@@ -24,10 +24,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let secureStorage = SecureStorageService()
         if let _ = secureStorage.obtainOnboardingFlag() {
             if let _ = secureStorage.obtainToken() {
-                let homeView = HomeAssembly.assemble()
+//                let homeView = HomeAssembly.assemble()
+//                let searchView = SearchAssembly.assemble()
+                let homeNavigation = UINavigationController(rootViewController: HomeAssembly.assemble())
+                let searchNavigation = UINavigationController(rootViewController: SearchAssembly.assemble())
+                searchNavigation.navigationBar.isHidden = true
                 let tabBarController = UITabBarController()
                 tabBarController.tabBar.tintColor = UIColor(red: 34/255, green: 164/255, blue: 97/255, alpha: 1)
-                tabBarController.setViewControllers([homeView], animated: true)
+                tabBarController.setViewControllers([homeNavigation, searchNavigation], animated: true)
                 rootViewController = tabBarController
             } else {
                 rootViewController = LoginAssembly.assemble()
@@ -36,6 +40,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             rootViewController = OnboardingAssembly.assemble()
         }
         let navigationController = UINavigationController(rootViewController: rootViewController)
+        navigationController.navigationBar.isHidden = true
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
     }
