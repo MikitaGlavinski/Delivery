@@ -10,4 +10,5 @@ import RxSwift
 
 protocol HomeInteractorInput {
     func getPlaces() -> Single<[PlaceModel]>?
+    func getFilters() -> Single<[FiltersModel]>?
 }

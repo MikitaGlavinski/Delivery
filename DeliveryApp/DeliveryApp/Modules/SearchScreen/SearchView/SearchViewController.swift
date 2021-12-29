@@ -78,7 +78,6 @@ extension SearchViewController: UITableViewDelegate {
         let view = UIView()
         view.backgroundColor = .white
         view.addSubview(label)
-        view.frame.size = CGSize(width: UIScreen.main.bounds.width, height: 80)
         return view
     }
     
@@ -89,7 +88,7 @@ extension SearchViewController: UITableViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let changeNumber = min((-scrollView.contentOffset.y * 0.8), 0)
         backViewTopConstraint.constant = changeNumber
-        tableViewTopConstraint.constant = max(-changeNumber - 110, 0)
+        tableViewTopConstraint.constant = max(-changeNumber - 120, 0)
     }
 }
 

@@ -9,4 +9,9 @@ import UIKit
 
 class HomeRouter {
     weak var view: UIViewController!
+    
+    func showFilters() {
+        let filterView = FilterAssembly.assemble()
+        view.navigationController?.pushViewController(filterView, animated: true)
+    }
 }

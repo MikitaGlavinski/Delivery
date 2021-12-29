@@ -9,6 +9,7 @@ import Foundation
 
 protocol HomePresenterProtocol: AnyObject {
     func viewDidLoad()
+    func showFilters()
 }
 
 protocol MainTableViewDelegate: AnyObject {

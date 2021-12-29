@@ -19,9 +19,13 @@ class HomeViewController: BaseViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        presenter.viewDidLoad()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter.viewDidLoad()
         setupUI()
     }
     
@@ -29,6 +33,10 @@ class HomeViewController: BaseViewController {
         tableView.register(UINib(nibName: "TestTableViewCell", bundle: nil), forCellReuseIdentifier: "Test")
         tableView.dataSource = self
         tableView.delegate = self
+    }
+    
+    @IBAction func filtersTapped(_ sender: Any) {
+        presenter.showFilters()
     }
 }
 
