@@ -47,7 +47,10 @@ class HomePresenter {
     
     private func setupTableView() {
         var cellModels = [TableViewCompatible]()
-        guard let place = placeModels.first else { return }
+        guard let place = placeModels.first else {
+            view.setupTableView(models: [])
+            return
+        }
         cellModels.append(FirstPlaceTableCellModel(placeId: place.id, images: place.images))
         cellModels.append(FeturedTableCellModel(name: "Featured Partners", places: placeModels))
         cellModels.append(InfoCellModel())
