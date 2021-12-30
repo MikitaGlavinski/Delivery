@@ -13,4 +13,6 @@ protocol FilterInteractorInput {
     func setFilter(filter: FiltersModel) -> Single<String>?
     func clearAllCategoriesFilters(isDeitery: Bool) -> Single<String>?
     func getPriceFilters() -> Single<[PriceFilter]>?
+    func setPriceFilter(filter: PriceFilter) -> Single<String>?
+    func clearAllPriceFilters() -> Single<String>?
 }

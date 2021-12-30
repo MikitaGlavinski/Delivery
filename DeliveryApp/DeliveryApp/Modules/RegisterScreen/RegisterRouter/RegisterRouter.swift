@@ -21,9 +21,12 @@ class RegisterRouter {
     }
     
     func routeToHome() {
-        let homeView = HomeAssembly.assemble()
+        let homeViewNavigation = UINavigationController(rootViewController: HomeAssembly.assemble())
+        let searchNavigation = UINavigationController(rootViewController: SearchAssembly.assemble())
+        searchNavigation.navigationBar.isHidden = true
         let tabBar = UITabBarController()
-        tabBar.setViewControllers([homeView], animated: true)
+        tabBar.tabBar.tintColor = UIColor(red: 34/255, green: 164/255, blue: 97/255, alpha: 1)
+        tabBar.setViewControllers([homeViewNavigation, searchNavigation], animated: true)
         view.navigationController?.setViewControllers([tabBar], animated: true)
     }
 }

@@ -12,4 +12,6 @@ protocol FilterPresenterProtocol: AnyObject {
     func updateFilter(filter: FiltersModel)
     func clearAllCategoriesFilters()
     func clearAllDietaryFilters()
+    func updatePriceFilter(filter: PriceFilter)
+    func clearAllPriceFilters()
 }

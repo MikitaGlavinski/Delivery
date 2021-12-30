@@ -10,7 +10,7 @@ import RxCocoa
 import RxSwift
 
 protocol PriceCollectionViewCellDelegate: AnyObject {
-    
+    func updatePriceFilter(filter: PriceFilter)
 }
 
 class PriceCollectionViewCell: UICollectionViewCell {
@@ -35,19 +35,25 @@ class PriceCollectionViewCell: UICollectionViewCell {
     func configureCell(with model: PriceFilter) {
         priceModel = model
         
+        label.text = ""
         for _ in 0..<priceModel.value {
             label.text = (label.text ?? "") + "$"
         }
         
-        contentView.layer.cornerRadius = 30
+        contentView.layer.cornerRadius = 35
         contentView.layer.borderWidth = 1
         contentView.layer.borderColor = UIColor.darkGray.cgColor
+        layer.cornerRadius = 35
+        
+        addGestures()
     }
     
     private func addGestures() {
         let tap = UITapGestureRecognizer()
         tap.rx.event.bind { [weak self] _ in
             self?.priceModel.isSelected.toggle()
+            guard let model = self?.priceModel else { return }
+            self?.delegate.updatePriceFilter(filter: model)
         }.disposed(by: disposeBag)
         contentView.addGestureRecognizer(tap)
     }

@@ -24,8 +24,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let secureStorage = SecureStorageService()
         if let _ = secureStorage.obtainOnboardingFlag() {
             if let _ = secureStorage.obtainToken() {
-//                let homeView = HomeAssembly.assemble()
-//                let searchView = SearchAssembly.assemble()
                 let homeNavigation = UINavigationController(rootViewController: HomeAssembly.assemble())
                 let searchNavigation = UINavigationController(rootViewController: SearchAssembly.assemble())
                 searchNavigation.navigationBar.isHidden = true

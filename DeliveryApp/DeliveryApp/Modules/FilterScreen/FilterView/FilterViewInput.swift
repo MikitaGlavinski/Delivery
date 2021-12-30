@@ -11,5 +11,5 @@ protocol FilterViewInput: AnyObject {
     func showError(error: Error)
     func showLoader()
     func hideLoader()
-    func setupFilters(categories: [FiltersModel], dietary: [FiltersModel])
+    func setupFilters(categories: [FiltersModel], dietary: [FiltersModel], priceFilters: [PriceFilter])
 }

@@ -36,19 +36,7 @@ extension FilterPresenter: FilterPresenterProtocol {
             .observe(on: MainScheduler.instance)
             .subscribe(onSuccess: { [weak self] filters in
                 self?.view.hideLoader()
-                self?.view.setupFilters(categories: categories, dietary: dietary)
-            }, onFailure: { [weak self] error in
-                self?.view.hideLoader()
-                self?.view.showError(error: error)
-            }).disposed(by: disposeBag)
-        
-        filterObtainer
-            .observe(on: MainScheduler.instance)
-            .subscribe(onSuccess: { [weak self] filters in
-                self?.view.hideLoader()
-                let categories = filters.filter({!$0.isDietary})
-                let dietary = filters.filter({$0.isDietary})
-                self?.view.setupFilters(categories: categories, dietary: dietary)
+                self?.view.setupFilters(categories: categories, dietary: dietary, priceFilters: filters)
             }, onFailure: { [weak self] error in
                 self?.view.hideLoader()
                 self?.view.showError(error: error)
@@ -58,6 +46,7 @@ extension FilterPresenter: FilterPresenterProtocol {
     func updateFilter(filter: FiltersModel) {
         guard let filterUpdater = interactor.setFilter(filter: filter) else { return }
         filterUpdater
+            .observe(on: MainScheduler.instance)
             .subscribe(onSuccess: { complete in
                 print(complete)
             }, onFailure: { [weak self] error in
@@ -82,6 +71,31 @@ extension FilterPresenter: FilterPresenterProtocol {
     func clearAllDietaryFilters() {
         self.view.showLoader()
         guard let clearer = interactor.clearAllCategoriesFilters(isDeitery: true) else { return }
+        clearer
+            .observe(on: MainScheduler.instance)
+            .subscribe(onSuccess: { [weak self] complete in
+                self?.view.hideLoader()
+                print(complete)
+            }, onFailure: { [weak self] error in
+                self?.view.hideLoader()
+                self?.view.showError(error: error)
+            }).disposed(by: disposeBag)
+    }
+    
+    func updatePriceFilter(filter: PriceFilter) {
+        guard let filterUpdater = interactor.setPriceFilter(filter: filter) else { return }
+        filterUpdater
+            .observe(on: MainScheduler.instance)
+            .subscribe(onSuccess: { complete in
+                print(complete)
+            }, onFailure: { [weak self] error in
+                self?.view.showError(error: error)
+            }).disposed(by: disposeBag)
+    }
+    
+    func clearAllPriceFilters() {
+        self.view.showLoader()
+        guard let clearer = interactor.clearAllPriceFilters() else { return }
         clearer
             .observe(on: MainScheduler.instance)
             .subscribe(onSuccess: { [weak self] complete in

@@ -15,6 +15,8 @@ protocol FirebaseServiceProtocol {
     func setFilter(filter: FiltersModel) -> Single<String>
     func clearAllFilters(filterField: String, filterValue: Any) -> Single<String>
     func getPriceFilters() -> Single<[PriceFilter]>
+    func setPriceFilter(priceFilter: PriceFilter) -> Single<String>
+    func clearAllPriceFilters() -> Single<String>
 }
 
 class FirebaseService: FirebaseServiceProtocol {
@@ -112,6 +114,31 @@ class FirebaseService: FirebaseServiceProtocol {
         }
     }
     
+    private func updateCollectionProperty(path: String, key: String, value: Any) -> Single<String> {
+        Single<String>.create { [weak self] observer -> Disposable in
+            self?.db.collection(path).getDocuments { snapshot, error in
+                if let error = error {
+                    observer(.failure(error))
+                    return
+                }
+                var counter: Int = 0
+                snapshot?.documents.forEach({ document in
+                    document.reference.updateData([key: value]) { error in
+                        counter += 1
+                        if let error = error {
+                            observer(.failure(error))
+                            return
+                        }
+                        if counter == snapshot?.documents.count {
+                            observer(.success("Ok"))
+                        }
+                    }
+                })
+            }
+            return Disposables.create()
+        }
+    }
+    
     func getPlaces() -> Single<[PlaceModel]> {
         getListData(path: "places", decodeType: PlaceModel.self)
     }
@@ -130,5 +157,13 @@ class FirebaseService: FirebaseServiceProtocol {
     
     func getPriceFilters() -> Single<[PriceFilter]> {
         getListData(path: "priceFilter", decodeType: PriceFilter.self)
+    }
+    
+    func setPriceFilter(priceFilter: PriceFilter) -> Single<String> {
+        setData(path: "priceFilter/\(priceFilter.id)", value: priceFilter)
+    }
+    
+    func clearAllPriceFilters() -> Single<String> {
+        updateCollectionProperty(path: "priceFilter", key: "isSelected", value: false)
     }
 }

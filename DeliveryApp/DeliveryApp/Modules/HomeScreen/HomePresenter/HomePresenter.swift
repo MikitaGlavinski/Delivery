@@ -31,6 +31,20 @@ class HomePresenter {
         })
     }
     
+    private func filterPlaceModelsBy(price filters: [PriceFilter]) {
+        if filters.count == 0 {
+            return
+        }
+        placeModels = placeModels.filter({ placeModel in
+            for filter in filters {
+                if placeModel.price == filter.value {
+                    return true
+                }
+            }
+            return false
+        })
+    }
+    
     private func setupTableView() {
         var cellModels = [TableViewCompatible]()
         guard let place = placeModels.first else { return }
@@ -50,36 +64,32 @@ extension HomePresenter: HomePresenterProtocol {
     
     func viewDidLoad() {
         view.showLoader()
-        guard let placesGetter = interactor.getPlaces() else { return }
+        var selectedFilters: [FiltersModel]!
+        guard
+            let placesGetter = interactor.getPlaces(),
+            let filtersObtainer = interactor.getFilters(),
+            let priceFilterObtainer = interactor.getPriceFilters()
+        else { return }
         placesGetter
             .flatMap { [weak self] places -> Single<[FiltersModel]> in
                 self?.placeModels = places
-                guard let filtersObtainer = self?.interactor.getFilters() else {
-                    return Single<[FiltersModel]>.error(NetworkError.uncategorized)
-                }
                 return filtersObtainer
             }
+            .flatMap({ filters -> Single<[PriceFilter]> in
+                selectedFilters = filters.filter({$0.isSelected})
+                return priceFilterObtainer
+            })
             .observe(on: MainScheduler.instance)
             .subscribe(onSuccess: { [weak self] filters in
-                let selectedFilters = filters.filter({$0.isSelected})
+                let selectedPriceFilters = filters.filter({$0.isSelected})
                 self?.filterPlaceModels(with: selectedFilters)
+                self?.filterPlaceModelsBy(price: selectedPriceFilters)
                 self?.view.hideLoader()
                 self?.setupTableView()
             }, onFailure: { [weak self] error in
                 self?.view.hideLoader()
                 self?.view.showError(error: error)
             }).disposed(by: disposeBag)
-        
-//        placesGetter
-//            .observe(on: MainScheduler.instance)
-//            .subscribe(onSuccess: { [weak self] places in
-//                self?.view.hideLoader()
-//                self?.placeModels = places
-//                self?.setupTableView()
-//            }, onFailure: { [weak self] error in
-//                self?.view.hideLoader()
-//                self?.view.showError(error: error)
-//            }).disposed(by: disposeBag)
     }
     
     func showFilters() {

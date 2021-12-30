@@ -23,4 +23,9 @@ extension HomeInteractor: HomeInteractorInput {
         firebaseService.getFilters()
             .subscribe(on: SerialDispatchQueueScheduler(qos: .background))
     }
+    
+    func getPriceFilters() -> Single<[PriceFilter]>? {
+        firebaseService.getPriceFilters()
+            .subscribe(on: SerialDispatchQueueScheduler(qos: .background))
+    }
 }

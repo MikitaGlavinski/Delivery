@@ -33,4 +33,14 @@ extension FilterInteractor: FilterInteractorInput {
         firebaseService.getPriceFilters()
             .subscribe(on: SerialDispatchQueueScheduler(qos: .background))
     }
+    
+    func setPriceFilter(filter: PriceFilter) -> Single<String>? {
+        firebaseService.setPriceFilter(priceFilter: filter)
+            .subscribe(on: SerialDispatchQueueScheduler(qos: .background))
+    }
+    
+    func clearAllPriceFilters() -> Single<String>? {
+        firebaseService.clearAllPriceFilters()
+            .subscribe(on: SerialDispatchQueueScheduler(qos: .background))
+    }
 }

@@ -15,17 +15,16 @@ class FilterViewController: BaseViewController {
     @IBOutlet weak var dietaryCollectionView: UICollectionView!
     @IBOutlet weak var dietaryCollectionViewHeight: NSLayoutConstraint!
     @IBOutlet weak var priceFilterCollectionView: UICollectionView!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     private var categoriesModels = [FiltersModel]() {
         didSet {
-            updateCategoriesHeight()
             categoriesCollectionView.reloadData()
         }
     }
     
     private var dietaryModels = [FiltersModel]() {
         didSet {
-            updateDietaryHeight()
             dietaryCollectionView.reloadData()
         }
     }
@@ -60,6 +59,14 @@ class FilterViewController: BaseViewController {
         
         priceFilterCollectionView.dataSource = self
         priceFilterCollectionView.delegate = self
+        
+        navigationController?.navigationBar.tintColor = UIColor(red: 34/255, green: 164/255, blue: 93/255, alpha: 1)
+    }
+    
+    private func setupLayout() {
+        updateCategoriesHeight()
+        updateDietaryHeight()
+        updateScrollContentSize()
     }
     
     private func updateCategoriesHeight() {
@@ -84,6 +91,11 @@ class FilterViewController: BaseViewController {
         dietaryCollectionViewHeight.constant = height
     }
     
+    private func updateScrollContentSize() {
+        let contentChangeHeight = (categoriesCollectionViewHeight.constant - 260) + (dietaryCollectionViewHeight.constant - 150)
+        scrollView.contentSize.height += contentChangeHeight
+    }
+    
     @IBAction func clearAllTapped(_ sender: Any) {
         for index in 0..<categoriesModels.count {
             categoriesModels[index].isSelected = false
@@ -97,12 +109,21 @@ class FilterViewController: BaseViewController {
         }
         presenter.clearAllDietaryFilters()
     }
+    
+    @IBAction func clearAllPriceTapped(_ sender: Any) {
+        for index in 0..<priceModels.count {
+            priceModels[index].isSelected = false
+        }
+        presenter.clearAllPriceFilters()
+    }
 }
 
 extension FilterViewController: FilterViewInput {
-    func setupFilters(categories: [FiltersModel], dietary: [FiltersModel]) {
+    func setupFilters(categories: [FiltersModel], dietary: [FiltersModel], priceFilters: [PriceFilter]) {
         categoriesModels = categories
         dietaryModels = dietary
+        priceModels = priceFilters
+        setupLayout()
     }
 }
 
@@ -110,6 +131,7 @@ extension FilterViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == priceFilterCollectionView {
+            print(priceModels.count)
             return priceModels.count
         } else {
             return collectionView == categoriesCollectionView ? categoriesModels.count : dietaryModels.count
@@ -136,7 +158,7 @@ extension FilterViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView == priceFilterCollectionView {
-            return CGSize(width: 60, height: 60)
+            return CGSize(width: 70, height: 70)
         } else {
             let models = collectionView == categoriesCollectionView ? categoriesModels : dietaryModels
             let textWidth = models[indexPath.item].name.width(height: 40, font: UIFont.systemFont(ofSize: 15, weight: .regular))
@@ -155,6 +177,9 @@ extension FilterViewController: UICollectionViewDelegateFlowLayout {
 
 
 extension FilterViewController: CategoryCollectionViewCellDelegate, PriceCollectionViewCellDelegate {
+    func updatePriceFilter(filter: PriceFilter) {
+        presenter.updatePriceFilter(filter: filter)
+    }
     
     func updateFilter(filter: FiltersModel) {
         presenter.updateFilter(filter: filter)
