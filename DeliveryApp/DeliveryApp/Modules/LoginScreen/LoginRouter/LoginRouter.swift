@@ -26,9 +26,13 @@ class LoginRouter {
         let homeViewNavigation = UINavigationController(rootViewController: HomeAssembly.assemble())
         let searchNavigation = UINavigationController(rootViewController: SearchAssembly.assemble())
         searchNavigation.navigationBar.isHidden = true
+        let orderNavigation = UINavigationController(rootViewController: OrderAssembly.assemble())
+        orderNavigation.navigationBar.isHidden = true
+        let profileNavigation = UINavigationController(rootViewController: ProfileAssembly.assemble())
+        profileNavigation.navigationBar.isHidden = true
         let tabBar = UITabBarController()
         tabBar.tabBar.tintColor = UIColor(red: 34/255, green: 164/255, blue: 97/255, alpha: 1)
-        tabBar.setViewControllers([homeViewNavigation, searchNavigation], animated: true)
+        tabBar.setViewControllers([homeViewNavigation, searchNavigation, orderNavigation, profileNavigation], animated: true)
         view.navigationController?.setViewControllers([tabBar], animated: true)
     }
 }

@@ -131,7 +131,6 @@ extension FilterViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == priceFilterCollectionView {
-            print(priceModels.count)
             return priceModels.count
         } else {
             return collectionView == categoriesCollectionView ? categoriesModels.count : dietaryModels.count

@@ -57,7 +57,7 @@ class CustomPageControl: UIView {
     private func createViews(selectedIndex: Int) {
         views.removeAll()
         subviews.forEach({$0.removeFromSuperview()})
-        for index in 0...pagesCount - 1 {
+        for index in 0..<pagesCount {
             let view = UIView()
             view.layer.cornerRadius = 3
             view.backgroundColor = index == currentIndex ? selectionColor : secondaryColor
