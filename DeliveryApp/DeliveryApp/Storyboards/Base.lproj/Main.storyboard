@@ -1275,6 +1275,21 @@
             </objects>
             <point key="canvasLocation" x="1796" y="-1008"/>
         </scene>
+        <!--Place Detail View Controller-->
+        <scene sceneID="GNU-JJ-NcM">
+            <objects>
+                <viewController storyboardIdentifier="PlaceDetail" id="y0B-BQ-3KB" customClass="PlaceDetailViewController" customModule="DeliveryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HD3-Yl-HpE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="gOF-8B-ID9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5av-2U-xfi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2567" y="-1198"/>
+        </scene>
         <!--Filter View Controller-->
         <scene sceneID="1eF-7w-6bB">
             <objects>
@@ -1467,7 +1482,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WWf-jE-kyo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2601" y="-1008"/>
+            <point key="canvasLocation" x="2548" y="-555"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="k5c-3x-Nkc">

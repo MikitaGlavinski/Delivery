@@ -26,6 +26,14 @@
 		FA244647277DEF0C00EFAE5B /* TitleProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA244646277DEF0C00EFAE5B /* TitleProfileTableViewCell.swift */; };
 		FA244649277DEF3A00EFAE5B /* SettingsProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA244648277DEF3A00EFAE5B /* SettingsProfileTableViewCell.swift */; };
 		FA24464C277DF02200EFAE5B /* SettingsCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA24464B277DF02200EFAE5B /* SettingsCellModel.swift */; };
+		FA244654277DFA9600EFAE5B /* PlaceDetailViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA244653277DFA9600EFAE5B /* PlaceDetailViewInput.swift */; };
+		FA244656277DFAB100EFAE5B /* PlaceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA244655277DFAB100EFAE5B /* PlaceDetailViewController.swift */; };
+		FA244658277DFAD900EFAE5B /* PlaceDetailPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA244657277DFAD900EFAE5B /* PlaceDetailPresenterProtocol.swift */; };
+		FA24465A277DFAEB00EFAE5B /* PlaceDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA244659277DFAEB00EFAE5B /* PlaceDetailPresenter.swift */; };
+		FA24465E277DFB1400EFAE5B /* PlaceDetailInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA24465D277DFB1400EFAE5B /* PlaceDetailInteractorInput.swift */; };
+		FA244660277DFB2000EFAE5B /* PlaceDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA24465F277DFB2000EFAE5B /* PlaceDetailInteractor.swift */; };
+		FA244662277DFB3900EFAE5B /* PlaceDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA244661277DFB3900EFAE5B /* PlaceDetailRouter.swift */; };
+		FA244664277DFB8200EFAE5B /* PlaceDetailAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA244663277DFB8200EFAE5B /* PlaceDetailAssembly.swift */; };
 		FA3AE600277098E6003543FD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3AE5FF277098E6003543FD /* LoginViewController.swift */; };
 		FA3AE60227709926003543FD /* LoginViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3AE60127709926003543FD /* LoginViewInput.swift */; };
 		FA3AE60427709950003543FD /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3AE60327709950003543FD /* LoginPresenter.swift */; };
@@ -151,6 +159,14 @@
 		FA244646277DEF0C00EFAE5B /* TitleProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleProfileTableViewCell.swift; sourceTree = "<group>"; };
 		FA244648277DEF3A00EFAE5B /* SettingsProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsProfileTableViewCell.swift; sourceTree = "<group>"; };
 		FA24464B277DF02200EFAE5B /* SettingsCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCellModel.swift; sourceTree = "<group>"; };
+		FA244653277DFA9600EFAE5B /* PlaceDetailViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailViewInput.swift; sourceTree = "<group>"; };
+		FA244655277DFAB100EFAE5B /* PlaceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailViewController.swift; sourceTree = "<group>"; };
+		FA244657277DFAD900EFAE5B /* PlaceDetailPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailPresenterProtocol.swift; sourceTree = "<group>"; };
+		FA244659277DFAEB00EFAE5B /* PlaceDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailPresenter.swift; sourceTree = "<group>"; };
+		FA24465D277DFB1400EFAE5B /* PlaceDetailInteractorInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailInteractorInput.swift; sourceTree = "<group>"; };
+		FA24465F277DFB2000EFAE5B /* PlaceDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailInteractor.swift; sourceTree = "<group>"; };
+		FA244661277DFB3900EFAE5B /* PlaceDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailRouter.swift; sourceTree = "<group>"; };
+		FA244663277DFB8200EFAE5B /* PlaceDetailAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailAssembly.swift; sourceTree = "<group>"; };
 		FA3AE5FF277098E6003543FD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FA3AE60127709926003543FD /* LoginViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewInput.swift; sourceTree = "<group>"; };
 		FA3AE60327709950003543FD /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
@@ -406,6 +422,61 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		FA24464D277DFA4900EFAE5B /* PlaceDetailScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FA244652277DFA7D00EFAE5B /* PlaceDetailAssembly */,
+				FA244651277DFA7400EFAE5B /* PlaceDetailRouter */,
+				FA244650277DFA6B00EFAE5B /* PlaceDetailInteractor */,
+				FA24464F277DFA6100EFAE5B /* PlaceDetailPresenter */,
+				FA24464E277DFA5600EFAE5B /* PlaceDetailView */,
+			);
+			path = PlaceDetailScreen;
+			sourceTree = "<group>";
+		};
+		FA24464E277DFA5600EFAE5B /* PlaceDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				FA244653277DFA9600EFAE5B /* PlaceDetailViewInput.swift */,
+				FA244655277DFAB100EFAE5B /* PlaceDetailViewController.swift */,
+			);
+			path = PlaceDetailView;
+			sourceTree = "<group>";
+		};
+		FA24464F277DFA6100EFAE5B /* PlaceDetailPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				FA244657277DFAD900EFAE5B /* PlaceDetailPresenterProtocol.swift */,
+				FA244659277DFAEB00EFAE5B /* PlaceDetailPresenter.swift */,
+			);
+			path = PlaceDetailPresenter;
+			sourceTree = "<group>";
+		};
+		FA244650277DFA6B00EFAE5B /* PlaceDetailInteractor */ = {
+			isa = PBXGroup;
+			children = (
+				FA24465D277DFB1400EFAE5B /* PlaceDetailInteractorInput.swift */,
+				FA24465F277DFB2000EFAE5B /* PlaceDetailInteractor.swift */,
+			);
+			path = PlaceDetailInteractor;
+			sourceTree = "<group>";
+		};
+		FA244651277DFA7400EFAE5B /* PlaceDetailRouter */ = {
+			isa = PBXGroup;
+			children = (
+				FA244661277DFB3900EFAE5B /* PlaceDetailRouter.swift */,
+			);
+			path = PlaceDetailRouter;
+			sourceTree = "<group>";
+		};
+		FA244652277DFA7D00EFAE5B /* PlaceDetailAssembly */ = {
+			isa = PBXGroup;
+			children = (
+				FA244663277DFB8200EFAE5B /* PlaceDetailAssembly.swift */,
+			);
+			path = PlaceDetailAssembly;
+			sourceTree = "<group>";
+		};
 		FA3AE5F52770967B003543FD /* Source */ = {
 			isa = PBXGroup;
 			children = (
@@ -428,6 +499,7 @@
 		FA3AE5F72770980E003543FD /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				FA24464D277DFA4900EFAE5B /* PlaceDetailScreen */,
 				FA24462E277DB81A00EFAE5B /* ProfileScreen */,
 				FA244618277DB64500EFAE5B /* OrderScreen */,
 				FA4D16A5277B4F86002C6AB0 /* FilterScreen */,
@@ -1054,13 +1126,16 @@
 				FA244637277DB86200EFAE5B /* ProfileViewController.swift in Sources */,
 				FAA5C21027735108007ED365 /* OnboardingRouter.swift in Sources */,
 				FAA5C1F227730A46007ED365 /* HomeAssembly.swift in Sources */,
+				FA244658277DFAD900EFAE5B /* PlaceDetailPresenterProtocol.swift in Sources */,
 				FAA5C1E527730953007ED365 /* HomeViewInput.swift in Sources */,
 				FA4D16B0277B4FFE002C6AB0 /* FilterPresenterProtocol.swift in Sources */,
 				FAF4682F2779EC27006044FB /* TestCollectionViewCell.swift in Sources */,
 				FA244629277DB6F000EFAE5B /* OrderInterctor.swift in Sources */,
 				FAA5C1EA2773099E007ED365 /* HomePresenter.swift in Sources */,
+				FA24465E277DFB1400EFAE5B /* PlaceDetailInteractorInput.swift in Sources */,
 				FA244641277DB8CE00EFAE5B /* ProfileRouter.swift in Sources */,
 				FA3AE61E2770BF5B003543FD /* RegisterInteractorInput.swift in Sources */,
+				FA244660277DFB2000EFAE5B /* PlaceDetailInteractor.swift in Sources */,
 				FA244649277DEF3A00EFAE5B /* SettingsProfileTableViewCell.swift in Sources */,
 				FAF468032779BD20006044FB /* RestaurantCellModel.swift in Sources */,
 				FAA5C1EC277309BD007ED365 /* HomeInteractorInput.swift in Sources */,
@@ -1101,12 +1176,16 @@
 				FA24462D277DB78400EFAE5B /* OrderAssembly.swift in Sources */,
 				FA3AE6292770CFB6003543FD /* AuthorizationService.swift in Sources */,
 				FA244639277DB87E00EFAE5B /* ProfilePresenterProtocol.swift in Sources */,
+				FA244664277DFB8200EFAE5B /* PlaceDetailAssembly.swift in Sources */,
+				FA244662277DFB3900EFAE5B /* PlaceDetailRouter.swift in Sources */,
 				FA3AE61C2770BF33003543FD /* RegisterPresenter.swift in Sources */,
 				FAF4681A2779E324006044FB /* SearchViewController.swift in Sources */,
+				FA244654277DFA9600EFAE5B /* PlaceDetailViewInput.swift in Sources */,
 				FA62165C277600A400144DCE /* FeaturedPlacesTableViewCell.swift in Sources */,
 				FAEB4C232774A09800ABC8FD /* FirstPlaceTableViewCell.swift in Sources */,
 				FAA5C1F0277309ED007ED365 /* HomeRouter.swift in Sources */,
 				FA3AE60C277099C6003543FD /* LoginRouter.swift in Sources */,
+				FA24465A277DFAEB00EFAE5B /* PlaceDetailPresenter.swift in Sources */,
 				FA440999277C4C7E00AA9AC8 /* StringExtension.swift in Sources */,
 				FA4D16B4277B5041002C6AB0 /* FilterInteractorInput.swift in Sources */,
 				FA3AE60227709926003543FD /* LoginViewInput.swift in Sources */,
@@ -1134,6 +1213,7 @@
 				FA244621277DB69D00EFAE5B /* OrderViewController.swift in Sources */,
 				FAA5C21227735155007ED365 /* OnboardingAssembly.swift in Sources */,
 				FA3AE60827709993003543FD /* LoginInteractorInput.swift in Sources */,
+				FA244656277DFAB100EFAE5B /* PlaceDetailViewController.swift in Sources */,
 				FA4D16AE277B4FDA002C6AB0 /* FilterViewController.swift in Sources */,
 				FA3AE6242770BFA4003543FD /* RegisterAssembly.swift in Sources */,
 				FAF468182779E315006044FB /* SearchViewInput.swift in Sources */,
