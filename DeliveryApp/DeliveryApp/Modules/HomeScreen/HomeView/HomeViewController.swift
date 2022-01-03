@@ -21,6 +21,7 @@ class HomeViewController: BaseViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        navigationController?.tabBarController?.tabBar.isHidden = false
         presenter.viewDidLoad()
     }
     
@@ -55,10 +56,17 @@ extension HomeViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let model = cellModels[indexPath.row]
-        return model.cellForTableView(tableView: tableView, delegate: nil)
+        return model.cellForTableView(tableView: tableView, delegate: self)
     }
 }
 
 extension HomeViewController: UITableViewDelegate {
+    
+}
 
+extension HomeViewController: MainTableViewDelegate {
+    
+    func selectRaw(with id: String) {
+        presenter.showDetailPlace(placeId: id)
+    }
 }

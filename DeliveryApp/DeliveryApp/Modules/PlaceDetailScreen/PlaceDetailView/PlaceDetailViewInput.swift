@@ -8,5 +8,8 @@
 import Foundation
 
 protocol PlaceDetailViewInput: AnyObject {
-    
+    func showError(error: Error)
+    func showLoader()
+    func hideLoader()
+    func setupTableView(models: [TableViewCompatible])
 }

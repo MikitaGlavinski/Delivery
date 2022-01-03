@@ -16,3 +16,7 @@ protocol TableViewCompatible {
     var reuseIdentifier: String { get }
     func cellForTableView(tableView: UITableView, delegate: MainTableViewDelegate?) -> UITableViewCell
 }
+
+protocol MainTableViewDelegate: AnyObject {
+    func selectRaw(with id: String)
+}

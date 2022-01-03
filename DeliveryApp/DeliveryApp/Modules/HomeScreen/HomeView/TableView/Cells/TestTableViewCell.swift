@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class TestTableViewCell: UITableViewCell, Configurable {
 
@@ -17,6 +19,10 @@ class TestTableViewCell: UITableViewCell, Configurable {
     @IBOutlet weak var secondFoodTypeLabel: UILabel!
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
+    
+    weak var delegate: MainTableViewDelegate!
+    
+    private let disposeBag = DisposeBag()
     
     private var placeModel: PlaceModel! {
         didSet {
@@ -44,6 +50,17 @@ class TestTableViewCell: UITableViewCell, Configurable {
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.layer.cornerRadius = 20
+        
+        setupGestures()
+    }
+    
+    private func setupGestures() {
+        let tap = UITapGestureRecognizer()
+        tap.rx.event.bind { [weak self] _ in
+            guard let placeId = self?.placeModel.id else { return }
+            self?.delegate.selectRaw(with: placeId)
+        }.disposed(by: disposeBag)
+        contentView.addGestureRecognizer(tap)
     }
 }
 

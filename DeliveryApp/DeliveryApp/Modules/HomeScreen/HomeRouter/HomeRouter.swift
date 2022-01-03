@@ -14,4 +14,9 @@ class HomeRouter {
         let filterView = FilterAssembly.assemble()
         view.navigationController?.pushViewController(filterView, animated: true)
     }
+    
+    func routeToDetailPlace(placeId: String) {
+        let detailView = PlaceDetailAssembly.assemble(placeId: placeId)
+        view.navigationController?.pushViewController(detailView, animated: true)
+    }
 }

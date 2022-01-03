@@ -98,8 +98,8 @@ extension HomePresenter: HomePresenterProtocol {
     func showFilters() {
         router.showFilters()
     }
-}
-
-extension HomePresenter: MainTableViewDelegate {
     
+    func showDetailPlace(placeId: String) {
+        router.routeToDetailPlace(placeId: placeId)
+    }
 }

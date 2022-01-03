@@ -8,5 +8,5 @@
 import Foundation
 
 protocol PlaceDetailPresenterProtocol: AnyObject {
-    
+    func viewDidLoad()
 }

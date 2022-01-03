@@ -1269,6 +1269,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="xkr-SE-paH" id="6fc-od-pGH"/>
+                        <segue destination="y0B-BQ-3KB" kind="show" id="fxf-rz-Ff6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gLt-Ou-ady" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1282,13 +1283,29 @@
                     <view key="view" contentMode="scaleToFill" id="HD3-Yl-HpE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Myt-5F-J6E">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="gOF-8B-ID9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Myt-5F-J6E" firstAttribute="leading" secondItem="gOF-8B-ID9" secondAttribute="leading" id="bez-xt-3c8"/>
+                            <constraint firstItem="gOF-8B-ID9" firstAttribute="trailing" secondItem="Myt-5F-J6E" secondAttribute="trailing" id="g5W-1E-LMf"/>
+                            <constraint firstItem="Myt-5F-J6E" firstAttribute="bottom" secondItem="HD3-Yl-HpE" secondAttribute="bottom" id="lCB-CB-hM3"/>
+                            <constraint firstItem="Myt-5F-J6E" firstAttribute="top" secondItem="gOF-8B-ID9" secondAttribute="top" id="wCZ-I6-Nt5"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="7Bn-cO-GMz"/>
+                    <connections>
+                        <outlet property="tableView" destination="Myt-5F-J6E" id="BMa-J2-wQ4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5av-2U-xfi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2567" y="-1198"/>
+            <point key="canvasLocation" x="2566.666666666667" y="-1198.6607142857142"/>
         </scene>
         <!--Filter View Controller-->
         <scene sceneID="1eF-7w-6bB">

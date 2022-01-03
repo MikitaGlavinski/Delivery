@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA0E18F32782E9600078A351 /* DetailTitleTableCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E18F22782E9600078A351 /* DetailTitleTableCellModel.swift */; };
+		FA0E18F62782E9D60078A351 /* DetailTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E18F42782E9D60078A351 /* DetailTitleTableViewCell.swift */; };
+		FA0E18F72782E9D60078A351 /* DetailTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA0E18F52782E9D60078A351 /* DetailTitleTableViewCell.xib */; };
+		FA0E18FA278323770078A351 /* FeaturedItemsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E18F8278323770078A351 /* FeaturedItemsTableViewCell.swift */; };
+		FA0E18FB278323770078A351 /* FeaturedItemsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA0E18F9278323770078A351 /* FeaturedItemsTableViewCell.xib */; };
+		FA0E18FD2783238E0078A351 /* DetailFeaturedItemsCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E18FC2783238E0078A351 /* DetailFeaturedItemsCellModel.swift */; };
+		FA0E1903278327B30078A351 /* FeatureItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E1901278327B30078A351 /* FeatureItemCollectionViewCell.swift */; };
+		FA0E1904278327B30078A351 /* FeatureItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA0E1902278327B30078A351 /* FeatureItemCollectionViewCell.xib */; };
+		FA0E190627832E900078A351 /* DishesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E190527832E900078A351 /* DishesModel.swift */; };
 		FA24461F277DB68300EFAE5B /* OrderViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA24461E277DB68300EFAE5B /* OrderViewInput.swift */; };
 		FA244621277DB69D00EFAE5B /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA244620277DB69D00EFAE5B /* OrderViewController.swift */; };
 		FA244623277DB6BC00EFAE5B /* OrderPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA244622277DB6BC00EFAE5B /* OrderPresenterProtocol.swift */; };
@@ -140,6 +149,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA0E18F22782E9600078A351 /* DetailTitleTableCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTitleTableCellModel.swift; sourceTree = "<group>"; };
+		FA0E18F42782E9D60078A351 /* DetailTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTitleTableViewCell.swift; sourceTree = "<group>"; };
+		FA0E18F52782E9D60078A351 /* DetailTitleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailTitleTableViewCell.xib; sourceTree = "<group>"; };
+		FA0E18F8278323770078A351 /* FeaturedItemsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedItemsTableViewCell.swift; sourceTree = "<group>"; };
+		FA0E18F9278323770078A351 /* FeaturedItemsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeaturedItemsTableViewCell.xib; sourceTree = "<group>"; };
+		FA0E18FC2783238E0078A351 /* DetailFeaturedItemsCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFeaturedItemsCellModel.swift; sourceTree = "<group>"; };
+		FA0E1901278327B30078A351 /* FeatureItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		FA0E1902278327B30078A351 /* FeatureItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeatureItemCollectionViewCell.xib; sourceTree = "<group>"; };
+		FA0E190527832E900078A351 /* DishesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishesModel.swift; sourceTree = "<group>"; };
 		FA24461E277DB68300EFAE5B /* OrderViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewInput.swift; sourceTree = "<group>"; };
 		FA244620277DB69D00EFAE5B /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		FA244622277DB6BC00EFAE5B /* OrderPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderPresenterProtocol.swift; sourceTree = "<group>"; };
@@ -285,6 +303,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA0E18EF2782E8930078A351 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				FA0E18FE2783276D0078A351 /* CollectionViewCells */,
+				FA0E18F12782E8A30078A351 /* Models */,
+				FA0E18F02782E89E0078A351 /* Cells */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		FA0E18F02782E89E0078A351 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FA0E18F42782E9D60078A351 /* DetailTitleTableViewCell.swift */,
+				FA0E18F52782E9D60078A351 /* DetailTitleTableViewCell.xib */,
+				FA0E18F8278323770078A351 /* FeaturedItemsTableViewCell.swift */,
+				FA0E18F9278323770078A351 /* FeaturedItemsTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		FA0E18F12782E8A30078A351 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FA0E18F22782E9600078A351 /* DetailTitleTableCellModel.swift */,
+				FA0E18FC2783238E0078A351 /* DetailFeaturedItemsCellModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FA0E18FE2783276D0078A351 /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				FA0E1901278327B30078A351 /* FeatureItemCollectionViewCell.swift */,
+				FA0E1902278327B30078A351 /* FeatureItemCollectionViewCell.xib */,
+			);
+			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
 		FA244618277DB64500EFAE5B /* OrderScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -437,6 +494,7 @@
 		FA24464E277DFA5600EFAE5B /* PlaceDetailView */ = {
 			isa = PBXGroup;
 			children = (
+				FA0E18EF2782E8930078A351 /* TableView */,
 				FA244653277DFA9600EFAE5B /* PlaceDetailViewInput.swift */,
 				FA244655277DFAB100EFAE5B /* PlaceDetailViewController.swift */,
 			);
@@ -726,6 +784,7 @@
 				FA62164B2775AD9E00144DCE /* PlaceModel.swift */,
 				FA4D16A3277B4EA8002C6AB0 /* FiltersModel.swift */,
 				FA44099C277CAB6B00AA9AC8 /* PriceFilter.swift */,
+				FA0E190527832E900078A351 /* DishesModel.swift */,
 			);
 			path = ApiModels;
 			sourceTree = "<group>";
@@ -1094,11 +1153,14 @@
 				FAF468302779EC27006044FB /* TestCollectionViewCell.xib in Resources */,
 				FAD6E4E12771B9670029F418 /* CustomTextField.xib in Resources */,
 				FA4D16A2277AFB88002C6AB0 /* CustomSearchBar.xib in Resources */,
+				FA0E18F72782E9D60078A351 /* DetailTitleTableViewCell.xib in Resources */,
+				FA0E1904278327B30078A351 /* FeatureItemCollectionViewCell.xib in Resources */,
 				FAB17147277093AB004ACB90 /* LaunchScreen.storyboard in Resources */,
 				FAB171692770952C004ACB90 /* GoogleService-Info.plist in Resources */,
 				FAF4682A2779E994006044FB /* TestTableViewCell.xib in Resources */,
 				FAB17144277093AB004ACB90 /* Assets.xcassets in Resources */,
 				FAB17142277093AA004ACB90 /* Main.storyboard in Resources */,
+				FA0E18FB278323770078A351 /* FeaturedItemsTableViewCell.xib in Resources */,
 				FA4D16BF277B58A7002C6AB0 /* CategoryCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1138,6 +1200,7 @@
 				FA244660277DFB2000EFAE5B /* PlaceDetailInteractor.swift in Sources */,
 				FA244649277DEF3A00EFAE5B /* SettingsProfileTableViewCell.swift in Sources */,
 				FAF468032779BD20006044FB /* RestaurantCellModel.swift in Sources */,
+				FA0E18FD2783238E0078A351 /* DetailFeaturedItemsCellModel.swift in Sources */,
 				FAA5C1EC277309BD007ED365 /* HomeInteractorInput.swift in Sources */,
 				FA244647277DEF0C00EFAE5B /* TitleProfileTableViewCell.swift in Sources */,
 				FA244625277DB6CD00EFAE5B /* OrderPresenter.swift in Sources */,
@@ -1154,12 +1217,14 @@
 				FAF4681C2779E330006044FB /* SearchPresenterProtocol.swift in Sources */,
 				FAA5C208277350A1007ED365 /* OnboardingPresenterProtocol.swift in Sources */,
 				FA62164C2775AD9E00144DCE /* PlaceModel.swift in Sources */,
+				FA0E190627832E900078A351 /* DishesModel.swift in Sources */,
 				FA3AE60E277099DD003543FD /* LoginAssembly.swift in Sources */,
 				FAA5C1EE277309D5007ED365 /* HomeInteractor.swift in Sources */,
 				FAF4680E2779D3FE006044FB /* TitleTableViewCell.swift in Sources */,
 				FA3AE600277098E6003543FD /* LoginViewController.swift in Sources */,
 				FA62165A2775D31800144DCE /* FirstPlaceTableCellModel.swift in Sources */,
 				FA44099F277CAEB500AA9AC8 /* PriceCollectionViewCell.swift in Sources */,
+				FA0E1903278327B30078A351 /* FeatureItemCollectionViewCell.swift in Sources */,
 				FAB1713B277093AA004ACB90 /* AppDelegate.swift in Sources */,
 				FA3AE61A2770BF1D003543FD /* RegisterPresenterProtocol.swift in Sources */,
 				FAA5C20627735077007ED365 /* OnboardingViewInput.swift in Sources */,
@@ -1195,6 +1260,7 @@
 				FAF468242779E359006044FB /* SearchRouter.swift in Sources */,
 				FAF468262779E363006044FB /* SearchAssembly.swift in Sources */,
 				FA4D16AC277B4FC0002C6AB0 /* FilterViewInput.swift in Sources */,
+				FA0E18F32782E9600078A351 /* DetailTitleTableCellModel.swift in Sources */,
 				FAF467F92779B44F006044FB /* InfoTableViewCell.swift in Sources */,
 				FA4D16B8277B5068002C6AB0 /* FilterRouter.swift in Sources */,
 				FA3AE6272770CE57003543FD /* ServiceLocator.swift in Sources */,
@@ -1206,6 +1272,7 @@
 				FA44099D277CAB6B00AA9AC8 /* PriceFilter.swift in Sources */,
 				FA6216602776087C00144DCE /* FeturedTableCellModel.swift in Sources */,
 				FA6216502775B2F600144DCE /* DictionaryHelpper.swift in Sources */,
+				FA0E18F62782E9D60078A351 /* DetailTitleTableViewCell.swift in Sources */,
 				FAD6E4DF2771B9530029F418 /* CustomTextField.swift in Sources */,
 				FA6216582775D18000144DCE /* CellProtocols.swift in Sources */,
 				FA4D16B6277B5051002C6AB0 /* FilterInteractor.swift in Sources */,
@@ -1216,6 +1283,7 @@
 				FA244656277DFAB100EFAE5B /* PlaceDetailViewController.swift in Sources */,
 				FA4D16AE277B4FDA002C6AB0 /* FilterViewController.swift in Sources */,
 				FA3AE6242770BFA4003543FD /* RegisterAssembly.swift in Sources */,
+				FA0E18FA278323770078A351 /* FeaturedItemsTableViewCell.swift in Sources */,
 				FAF468182779E315006044FB /* SearchViewInput.swift in Sources */,
 				FA3AE60427709950003543FD /* LoginPresenter.swift in Sources */,
 				FAF4681E2779E33A006044FB /* SearchPresenter.swift in Sources */,
