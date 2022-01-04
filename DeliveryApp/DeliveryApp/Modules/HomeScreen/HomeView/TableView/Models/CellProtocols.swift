@@ -19,4 +19,11 @@ protocol TableViewCompatible {
 
 protocol MainTableViewDelegate: AnyObject {
     func selectRaw(with id: String)
+    func selectCategory(category: String)
+}
+
+extension MainTableViewDelegate {
+    func selectRaw(with id: String) {}
+    
+    func selectCategory(category: String) {}
 }

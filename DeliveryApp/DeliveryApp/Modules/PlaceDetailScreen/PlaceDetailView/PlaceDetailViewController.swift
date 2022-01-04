@@ -10,14 +10,11 @@ import UIKit
 class PlaceDetailViewController: BaseViewController {
     
     var presenter: PlaceDetailPresenterProtocol!
+    private var selectedCategoryIndex: Int = 0
     
     @IBOutlet weak var tableView: UITableView!
     
-    private var cellModels = [TableViewCompatible]() {
-        didSet {
-            tableView.reloadData()
-        }
-    }
+    private var cellModels = [TableViewCompatible]()
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -33,7 +30,10 @@ class PlaceDetailViewController: BaseViewController {
     private func setupUI() {
         tableView.register(UINib(nibName: "DetailTitleTableViewCell", bundle: nil), forCellReuseIdentifier: "DetailTitle")
         tableView.register(UINib(nibName: "FeaturedItemsTableViewCell", bundle: nil), forCellReuseIdentifier: "DetailFeature")
+        tableView.register(UINib(nibName: "DetailCategoriesTableViewCell", bundle: nil), forCellReuseIdentifier: "DetailCategories")
+        tableView.register(UINib(nibName: "DetailDishTableViewCell", bundle: nil), forCellReuseIdentifier: "DetailDish")
         tableView.dataSource = self
+        tableView.delegate = self
     }
 }
 
@@ -41,7 +41,25 @@ extension PlaceDetailViewController: PlaceDetailViewInput {
     
     func setupTableView(models: [TableViewCompatible]) {
         cellModels = models
+        tableView.reloadData()
     }
+    
+    func updateTableView(models: [TableViewCompatible], fromIndex: Int, toIndex: Int) {
+        var deleteArray = [IndexPath]()
+        for index in 3..<cellModels.count {
+            deleteArray.append(IndexPath(row: index, section: 0))
+            cellModels.remove(at: 3)
+        }
+        tableView.deleteRows(at: deleteArray, with: .none)
+        var updateArray = [IndexPath]()
+        for index in 3..<models.count {
+            updateArray.append(IndexPath(row: index, section: 0))
+            cellModels.append(models[index])
+        }
+        tableView.insertRows(at: updateArray, with: .fade)
+
+    }
+    
 }
 
 extension PlaceDetailViewController: UITableViewDataSource {
@@ -52,7 +70,19 @@ extension PlaceDetailViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let model = cellModels[indexPath.row]
-        let cell = model.cellForTableView(tableView: tableView, delegate: nil)
+        let cell = model.cellForTableView(tableView: tableView, delegate: self)
         return cell
+    }
+}
+
+extension PlaceDetailViewController: UITableViewDelegate {
+    
+
+}
+
+extension PlaceDetailViewController: MainTableViewDelegate {
+    
+    func selectCategory(category: String) {
+        presenter.filterDishes(by: category)
     }
 }

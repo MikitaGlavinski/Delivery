@@ -12,4 +12,5 @@ protocol PlaceDetailViewInput: AnyObject {
     func showLoader()
     func hideLoader()
     func setupTableView(models: [TableViewCompatible])
+    func updateTableView(models: [TableViewCompatible], fromIndex: Int, toIndex: Int)
 }

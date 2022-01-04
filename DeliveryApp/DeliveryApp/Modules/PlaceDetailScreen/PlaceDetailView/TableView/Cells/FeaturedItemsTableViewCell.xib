@@ -19,18 +19,18 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Featured Items" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ttO-LZ-RS6">
-                        <rect key="frame" x="20" y="30" width="131" height="17"/>
+                        <rect key="frame" x="20" y="30" width="131" height="24"/>
                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="j21-er-A0P">
-                        <rect key="frame" x="0.0" y="55" width="464" height="250"/>
+                        <rect key="frame" x="0.0" y="62" width="464" height="190"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="250" id="9AE-sY-UCy"/>
+                            <constraint firstAttribute="height" constant="190" id="9AE-sY-UCy"/>
                         </constraints>
-                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="20" minimumInteritemSpacing="0.0" id="crG-ci-wiC">
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="25" minimumInteritemSpacing="0.0" id="crG-ci-wiC">
                             <size key="itemSize" width="128" height="128"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -42,7 +42,7 @@
                     <constraint firstAttribute="trailing" secondItem="j21-er-A0P" secondAttribute="trailing" id="OGb-Ym-x3V"/>
                     <constraint firstItem="j21-er-A0P" firstAttribute="top" secondItem="ttO-LZ-RS6" secondAttribute="bottom" constant="8" symbolic="YES" id="StI-uM-Z64"/>
                     <constraint firstItem="j21-er-A0P" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="VoW-GJ-MCf"/>
-                    <constraint firstAttribute="bottom" secondItem="j21-er-A0P" secondAttribute="bottom" id="XNY-SN-gfM"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="j21-er-A0P" secondAttribute="bottom" id="XNY-SN-gfM"/>
                     <constraint firstItem="ttO-LZ-RS6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="Ywb-C5-6UZ"/>
                     <constraint firstItem="ttO-LZ-RS6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="30" id="qgm-A7-2R9"/>
                 </constraints>

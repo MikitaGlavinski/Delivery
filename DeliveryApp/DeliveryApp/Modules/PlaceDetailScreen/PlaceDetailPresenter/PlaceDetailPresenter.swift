@@ -14,6 +14,9 @@ class PlaceDetailPresenter {
     var router: PlaceDetailRouter!
     
     private let disposeBag = DisposeBag()
+    private var placeModel: PlaceModel!
+    private var dishModels: [DishesModel]!
+    private var filteredDishModels: [DishesModel]?
     
     var placeId: String
     
@@ -21,11 +24,19 @@ class PlaceDetailPresenter {
         self.placeId = placeId
     }
     
-    private func setupCellModels(place: PlaceModel, dishes: [DishesModel]) {
+    private func setupCellModels(isUpdate: Bool = false) {
         var cellModels = [TableViewCompatible]()
-        cellModels.append(DetailTitleTableCellModel(title: place.name, priceRange: place.price, foodType: place.foodType, rating: place.rating, deliveryTime: place.deliveryTime))
-        cellModels.append(DetailFeaturedItemsCellModel(dishes: dishes))
-        view.setupTableView(models: cellModels)
+        cellModels.append(DetailTitleTableCellModel(title: placeModel.name, priceRange: placeModel.price, foodType: placeModel.foodType, rating: placeModel.rating, deliveryTime: placeModel.deliveryTime))
+        cellModels.append(DetailFeaturedItemsCellModel(dishes: dishModels))
+        cellModels.append(DetailCategoriesTableCellModel(categories: placeModel.categories))
+        for dish in filteredDishModels ?? [] {
+            cellModels.append(DetailDishTableCellModel(dish: dish))
+        }
+        guard isUpdate else {
+            view.setupTableView(models: cellModels)
+            return
+        }
+        view.updateTableView(models: cellModels, fromIndex: 3, toIndex: 3 + dishModels.count)
     }
 }
 
@@ -33,22 +44,33 @@ extension PlaceDetailPresenter: PlaceDetailPresenterProtocol {
     
     func viewDidLoad() {
         view.showLoader()
-        var placeModel: PlaceModel!
         guard
             let placeObtainer = interactor.getPlace(placeId: placeId),
             let dishesObtainer = interactor.getDishes(placeId: placeId)
         else { return }
         placeObtainer
-            .flatMap({ place -> Single<[DishesModel]> in
-                placeModel = place
+            .flatMap({ [weak self] place -> Single<[DishesModel]> in
+                self?.placeModel = place
                 return dishesObtainer
             })
             .observe(on: MainScheduler.instance)
             .subscribe(onSuccess: { [weak self] dishes in
+                self?.dishModels = dishes
+                self?.filteredDishModels = dishes
                 self?.view.hideLoader()
-                self?.setupCellModels(place: placeModel, dishes: dishes)
+                self?.setupCellModels()
             }, onFailure: { [weak self] error in
                 self?.view.showError(error: error)
             }).disposed(by: disposeBag)
+    }
+    
+    func filterDishes(by category: String) {
+        guard category == "Most Populars" else {
+            filteredDishModels = dishModels.filter({$0.foodType.contains(category)})
+            setupCellModels(isUpdate: true)
+            return
+        }
+        filteredDishModels = dishModels
+        setupCellModels(isUpdate: true)
     }
 }

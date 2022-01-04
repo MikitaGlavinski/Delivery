@@ -9,4 +9,5 @@ import Foundation
 
 protocol PlaceDetailPresenterProtocol: AnyObject {
     func viewDidLoad()
+    func filterDishes(by category: String)
 }
