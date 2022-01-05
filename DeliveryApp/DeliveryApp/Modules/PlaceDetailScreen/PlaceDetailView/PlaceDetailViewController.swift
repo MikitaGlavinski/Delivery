@@ -19,6 +19,7 @@ class PlaceDetailViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.tabBarController?.tabBar.isHidden = true
+        navigationController?.navigationBar.isHidden = false
     }
     
     override func viewDidLoad() {
@@ -77,7 +78,12 @@ extension PlaceDetailViewController: UITableViewDataSource {
 
 extension PlaceDetailViewController: UITableViewDelegate {
     
-
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let model = cellModels[indexPath.row] as? DetailDishTableCellModel, indexPath.row > 2 else {
+            return
+        }
+        presenter.showDishDetail(dishId: model.dish.id)
+    }
 }
 
 extension PlaceDetailViewController: MainTableViewDelegate {

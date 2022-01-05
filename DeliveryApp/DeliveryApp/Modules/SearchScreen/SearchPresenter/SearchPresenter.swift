@@ -41,4 +41,8 @@ extension SearchPresenter: SearchPresenterProtocol {
         let cellModels = filteredPlaces.compactMap({RestaurantCellModel(place: $0)})
         view.setupTableView(places: cellModels)
     }
+    
+    func showPlaceDetail(placeId: String) {
+        router.routeToDetailPlace(placeId: placeId)
+    }
 }

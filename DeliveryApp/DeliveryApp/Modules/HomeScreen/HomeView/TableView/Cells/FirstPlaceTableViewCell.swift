@@ -6,11 +6,15 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class FirstPlaceTableViewCell: UITableViewCell, Configurable {
 
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var pageControl: CustomPageControl!
+    
+    private let disposeBag = DisposeBag()
     
     private var placeId: String!
     private var images: [String] = [String]() {
@@ -18,13 +22,20 @@ class FirstPlaceTableViewCell: UITableViewCell, Configurable {
             collectionView.reloadData()
         }
     }
-    weak var delegate: MainTableViewDelegate!
+    weak var delegate: MainTableViewDelegate?
     
     private func setupUI() {
         collectionView.register(UINib(nibName: "TestCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "Test")
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.layer.cornerRadius = 20
+        
+        let tap = UITapGestureRecognizer()
+        tap.rx.event.bind { [weak self] _ in
+            guard let placeId = self?.placeId else { return }
+            self?.delegate?.selectRaw(with: placeId)
+        }.disposed(by: disposeBag)
+        contentView.addGestureRecognizer(tap)
     }
     
     func configureCell(with model: FirstPlaceTableCellModel) {

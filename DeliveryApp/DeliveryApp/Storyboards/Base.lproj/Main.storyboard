@@ -640,6 +640,7 @@
                     <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" id="a7E-ug-Ys6">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.1333333333" green="0.64313725489999995" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="5he-Kf-fjF" kind="relationship" relationship="rootViewController" id="Jr8-yK-640"/>
@@ -898,6 +899,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3QU-s1-5kt">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.1333333333" green="0.64313725489999995" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="m5M-bT-n4H" kind="relationship" relationship="rootViewController" id="gXF-On-8hU"/>
@@ -1298,7 +1300,29 @@
                             <constraint firstItem="Myt-5F-J6E" firstAttribute="top" secondItem="gOF-8B-ID9" secondAttribute="top" id="wCZ-I6-Nt5"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="7Bn-cO-GMz"/>
+                    <navigationItem key="navigationItem" id="7Bn-cO-GMz">
+                        <rightBarButtonItems>
+                            <barButtonItem style="plain" id="Xug-ka-bKE">
+                                <inset key="largeContentSizeImageInsets" minX="1" minY="0.0" maxX="1" maxY="0.0"/>
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="1OQ-02-WGt">
+                                    <rect key="frame" x="354" y="11" width="40" height="22"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="magnifyingglass" catalog="system"/>
+                                </button>
+                            </barButtonItem>
+                            <barButtonItem style="plain" id="QeV-Ic-0j9">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="oT0-aa-jW1">
+                                    <rect key="frame" x="306" y="11" width="40" height="22"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="arrowshape.turn.up.forward.fill" catalog="system"/>
+                                </button>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="Myt-5F-J6E" id="BMa-J2-wQ4"/>
                     </connections>
@@ -1306,6 +1330,55 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5av-2U-xfi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2566.666666666667" y="-1198.6607142857142"/>
+        </scene>
+        <!--Dish Detail View Controller-->
+        <scene sceneID="sq4-Z5-blj">
+            <objects>
+                <viewController storyboardIdentifier="DishDetail" id="kym-uy-a0c" customClass="DishDetailViewController" customModule="DeliveryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IRb-Kk-wZ3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dAo-kP-Bvp">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="DEJ-xW-Mx6">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="foodPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="FxZ-KX-Ny1">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="200" identifier="height" id="MBg-9W-3Qd"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="FxZ-KX-Ny1" secondAttribute="bottom" identifier="bottom" id="STK-6N-7yY"/>
+                                        <constraint firstAttribute="trailing" secondItem="FxZ-KX-Ny1" secondAttribute="trailing" id="VfD-GW-u6Q"/>
+                                        <constraint firstItem="FxZ-KX-Ny1" firstAttribute="leading" secondItem="DEJ-xW-Mx6" secondAttribute="leading" id="YFG-R6-ztt"/>
+                                    </constraints>
+                                </view>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hpc-yE-gXU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dAo-kP-Bvp" firstAttribute="leading" secondItem="hpc-yE-gXU" secondAttribute="leading" id="2fk-Nl-0mh"/>
+                            <constraint firstItem="hpc-yE-gXU" firstAttribute="trailing" secondItem="dAo-kP-Bvp" secondAttribute="trailing" id="WZC-Fa-3My"/>
+                            <constraint firstItem="dAo-kP-Bvp" firstAttribute="bottom" secondItem="IRb-Kk-wZ3" secondAttribute="bottom" id="Wss-q2-M8k"/>
+                            <constraint firstAttribute="top" secondItem="dAo-kP-Bvp" secondAttribute="top" id="dtT-Ba-7yg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="headerView" destination="DEJ-xW-Mx6" id="5bV-p5-Mwx"/>
+                        <outlet property="tableView" destination="dAo-kP-Bvp" id="OP6-0Z-orM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Qv-M6-ird" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3328.985507246377" y="-1199.3303571428571"/>
         </scene>
         <!--Filter View Controller-->
         <scene sceneID="1eF-7w-6bB">
@@ -1525,10 +1598,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrowshape.turn.up.forward.fill" catalog="system" width="128" height="106"/>
         <image name="burger" width="512" height="444"/>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
+        <image name="foodPlaceholder" width="860" height="760"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="infoImage" width="825" height="420"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="menubar.rectangle" catalog="system" width="128" height="93"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemBackgroundColor">

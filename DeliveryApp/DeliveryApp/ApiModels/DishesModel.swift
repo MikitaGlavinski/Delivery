@@ -15,6 +15,7 @@ struct DishesModel: Codable {
     var image: String
     var price: Float
     var priceType: Int
+    var choices: [String]
     
     init(
         id: Int,
@@ -23,7 +24,8 @@ struct DishesModel: Codable {
         foodType: [String],
         image: String,
         price: Float,
-        priceType: Int
+        priceType: Int,
+        choices: [String]
     ) {
         self.id = id
         self.name = name
@@ -32,6 +34,7 @@ struct DishesModel: Codable {
         self.image = image
         self.price = price
         self.priceType = priceType
+        self.choices = choices
     }
     
     enum CodingKeys: String, CodingKey {
@@ -42,5 +45,6 @@ struct DishesModel: Codable {
         case image = "image"
         case price = "price"
         case priceType = "priceType"
+        case choices = "choices"
     }
 }

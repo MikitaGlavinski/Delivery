@@ -7,8 +7,27 @@
 
 import UIKit
 import Kingfisher
+import RxCocoa
+import RxSwift
+
+protocol DetailPlaceCollectionViewCellDelegate: AnyObject {
+    func selectPlace(placeId: String)
+}
 
 class DetailPlaceCollectionViewCell: UICollectionViewCell {
+    
+    weak var delegate: DetailPlaceCollectionViewCellDelegate?
+    private let disposeBag = DisposeBag()
+    private var placeModel: PlaceModel! {
+        didSet {
+            imageView.kf.setImage(with: URL(string: placeModel.images[0]), options: [])
+            nameLabel.text = placeModel.name
+            locationLabel.text = placeModel.location
+            ratingLabel.text = String(placeModel.rating)
+            timeLabel.text = "\(placeModel.deliveryTime) min"
+            deliveryTypeLabel.text = placeModel.deliveryType
+        }
+    }
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -18,11 +37,16 @@ class DetailPlaceCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var deliveryTypeLabel: UILabel!
     
     func configureCell(with model: PlaceModel) {
-        imageView.kf.setImage(with: URL(string: model.images[0]), options: [])
-        nameLabel.text = model.name
-        locationLabel.text = model.location
-        ratingLabel.text = String(model.rating)
-        timeLabel.text = "\(model.deliveryTime) min"
-        deliveryTypeLabel.text = model.deliveryType
+        placeModel = model
+        setupGestures()
+    }
+    
+    private func setupGestures() {
+        let tap = UITapGestureRecognizer()
+        tap.rx.event.bind { [weak self] _ in
+            guard let placeId = self?.placeModel.id else { return }
+            self?.delegate?.selectPlace(placeId: placeId)
+        }.disposed(by: disposeBag)
+        contentView.addGestureRecognizer(tap)
     }
 }

@@ -25,6 +25,13 @@ class SearchViewController: BaseViewController {
     @IBOutlet weak var backViewTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var tableViewTopConstraint: NSLayoutConstraint!
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.tintColor = UIColor(red: 34/255, green: 164/255, blue: 97/255, alpha: 1)
+        navigationController?.navigationBar.isHidden = true
+        navigationController?.tabBarController?.tabBar.isHidden = false
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewDidLoad()
@@ -64,8 +71,14 @@ extension SearchViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let model = cellModels[indexPath.row]
-        let cell = model.cellForTableView(tableView: tableView, delegate: nil)
+        let cell = model.cellForTableView(tableView: tableView, delegate: self)
         return cell
+    }
+}
+
+extension SearchViewController: MainTableViewDelegate {
+    func selectRaw(with id: String) {
+        presenter.showPlaceDetail(placeId: id)
     }
 }
 

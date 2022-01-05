@@ -73,4 +73,8 @@ extension PlaceDetailPresenter: PlaceDetailPresenterProtocol {
         filteredDishModels = dishModels
         setupCellModels(isUpdate: true)
     }
+    
+    func showDishDetail(dishId: Int) {
+        router.routeToDishDetail(dishId: dishId, placeId: placeId)
+    }
 }

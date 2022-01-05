@@ -22,6 +22,7 @@ class HomeViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.tabBarController?.tabBar.isHidden = false
+        navigationController?.navigationBar.tintColor = UIColor(red: 34/255, green: 164/255, blue: 97/255, alpha: 1)
         presenter.viewDidLoad()
     }
     

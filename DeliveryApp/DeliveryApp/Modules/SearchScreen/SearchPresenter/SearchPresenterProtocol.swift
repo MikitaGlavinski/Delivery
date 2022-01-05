@@ -10,4 +10,5 @@ import Foundation
 protocol SearchPresenterProtocol: AnyObject {
     func viewDidLoad()
     func filterPlaces(with text: String)
+    func showPlaceDetail(placeId: String)
 }

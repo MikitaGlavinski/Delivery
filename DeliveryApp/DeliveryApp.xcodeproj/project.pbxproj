@@ -24,6 +24,20 @@
 		FA0E1903278327B30078A351 /* FeatureItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E1901278327B30078A351 /* FeatureItemCollectionViewCell.swift */; };
 		FA0E1904278327B30078A351 /* FeatureItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA0E1902278327B30078A351 /* FeatureItemCollectionViewCell.xib */; };
 		FA0E190627832E900078A351 /* DishesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E190527832E900078A351 /* DishesModel.swift */; };
+		FA0FBDC02785C3AC00DA068E /* DishDetailViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FBDBF2785C3AC00DA068E /* DishDetailViewInput.swift */; };
+		FA0FBDC22785C3CB00DA068E /* DishDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FBDC12785C3CB00DA068E /* DishDetailViewController.swift */; };
+		FA0FBDC42785C3F500DA068E /* DishDetailPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FBDC32785C3F500DA068E /* DishDetailPresenterProtocol.swift */; };
+		FA0FBDC62785C40700DA068E /* DishDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FBDC52785C40700DA068E /* DishDetailPresenter.swift */; };
+		FA0FBDC82785C42200DA068E /* DishDetailInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FBDC72785C42200DA068E /* DishDetailInteractorInput.swift */; };
+		FA0FBDCA2785C42F00DA068E /* DishDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FBDC92785C42F00DA068E /* DishDetailInteractor.swift */; };
+		FA0FBDCC2785C44B00DA068E /* DishDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FBDCB2785C44B00DA068E /* DishDetailRouter.swift */; };
+		FA0FBDCE2785C4C200DA068E /* DishDetailAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FBDCD2785C4C100DA068E /* DishDetailAssembly.swift */; };
+		FA0FBDD52785CC9300DA068E /* DishDetailTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FBDD32785CC9300DA068E /* DishDetailTitleTableViewCell.swift */; };
+		FA0FBDD62785CC9300DA068E /* DishDetailTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA0FBDD42785CC9300DA068E /* DishDetailTitleTableViewCell.xib */; };
+		FA0FBDD92785D1A700DA068E /* DishDetailTitleCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FBDD82785D1A700DA068E /* DishDetailTitleCellModel.swift */; };
+		FA0FBDDC2785E6A700DA068E /* DishChoiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FBDDA2785E6A700DA068E /* DishChoiceTableViewCell.swift */; };
+		FA0FBDDD2785E6A700DA068E /* DishChoiceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA0FBDDB2785E6A700DA068E /* DishChoiceTableViewCell.xib */; };
+		FA0FBDDF2785E95500DA068E /* DishChoiceTableCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0FBDDE2785E95500DA068E /* DishChoiceTableCellModel.swift */; };
 		FA24461F277DB68300EFAE5B /* OrderViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA24461E277DB68300EFAE5B /* OrderViewInput.swift */; };
 		FA244621277DB69D00EFAE5B /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA244620277DB69D00EFAE5B /* OrderViewController.swift */; };
 		FA244623277DB6BC00EFAE5B /* OrderPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA244622277DB6BC00EFAE5B /* OrderPresenterProtocol.swift */; };
@@ -89,7 +103,7 @@
 		FA4D16BF277B58A7002C6AB0 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA4D16BD277B58A7002C6AB0 /* CategoryCollectionViewCell.xib */; };
 		FA62164C2775AD9E00144DCE /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62164B2775AD9E00144DCE /* PlaceModel.swift */; };
 		FA62164E2775B00C00144DCE /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62164D2775B00C00144DCE /* FirebaseService.swift */; };
-		FA6216502775B2F600144DCE /* DictionaryHelpper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62164F2775B2F600144DCE /* DictionaryHelpper.swift */; };
+		FA6216502775B2F600144DCE /* DictionaryHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62164F2775B2F600144DCE /* DictionaryHelper.swift */; };
 		FA6216532775C5FB00144DCE /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = FA6216522775C5FB00144DCE /* Kingfisher */; };
 		FA6216582775D18000144DCE /* CellProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6216572775D18000144DCE /* CellProtocols.swift */; };
 		FA62165A2775D31800144DCE /* FirstPlaceTableCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6216592775D31800144DCE /* FirstPlaceTableCellModel.swift */; };
@@ -174,6 +188,20 @@
 		FA0E1901278327B30078A351 /* FeatureItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		FA0E1902278327B30078A351 /* FeatureItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeatureItemCollectionViewCell.xib; sourceTree = "<group>"; };
 		FA0E190527832E900078A351 /* DishesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishesModel.swift; sourceTree = "<group>"; };
+		FA0FBDBF2785C3AC00DA068E /* DishDetailViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishDetailViewInput.swift; sourceTree = "<group>"; };
+		FA0FBDC12785C3CB00DA068E /* DishDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishDetailViewController.swift; sourceTree = "<group>"; };
+		FA0FBDC32785C3F500DA068E /* DishDetailPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishDetailPresenterProtocol.swift; sourceTree = "<group>"; };
+		FA0FBDC52785C40700DA068E /* DishDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishDetailPresenter.swift; sourceTree = "<group>"; };
+		FA0FBDC72785C42200DA068E /* DishDetailInteractorInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishDetailInteractorInput.swift; sourceTree = "<group>"; };
+		FA0FBDC92785C42F00DA068E /* DishDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishDetailInteractor.swift; sourceTree = "<group>"; };
+		FA0FBDCB2785C44B00DA068E /* DishDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishDetailRouter.swift; sourceTree = "<group>"; };
+		FA0FBDCD2785C4C100DA068E /* DishDetailAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishDetailAssembly.swift; sourceTree = "<group>"; };
+		FA0FBDD32785CC9300DA068E /* DishDetailTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishDetailTitleTableViewCell.swift; sourceTree = "<group>"; };
+		FA0FBDD42785CC9300DA068E /* DishDetailTitleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishDetailTitleTableViewCell.xib; sourceTree = "<group>"; };
+		FA0FBDD82785D1A700DA068E /* DishDetailTitleCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishDetailTitleCellModel.swift; sourceTree = "<group>"; };
+		FA0FBDDA2785E6A700DA068E /* DishChoiceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishChoiceTableViewCell.swift; sourceTree = "<group>"; };
+		FA0FBDDB2785E6A700DA068E /* DishChoiceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishChoiceTableViewCell.xib; sourceTree = "<group>"; };
+		FA0FBDDE2785E95500DA068E /* DishChoiceTableCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishChoiceTableCellModel.swift; sourceTree = "<group>"; };
 		FA24461E277DB68300EFAE5B /* OrderViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewInput.swift; sourceTree = "<group>"; };
 		FA244620277DB69D00EFAE5B /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		FA244622277DB6BC00EFAE5B /* OrderPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderPresenterProtocol.swift; sourceTree = "<group>"; };
@@ -239,7 +267,7 @@
 		FA4D16BD277B58A7002C6AB0 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
 		FA62164B2775AD9E00144DCE /* PlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
 		FA62164D2775B00C00144DCE /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
-		FA62164F2775B2F600144DCE /* DictionaryHelpper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryHelpper.swift; sourceTree = "<group>"; };
+		FA62164F2775B2F600144DCE /* DictionaryHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryHelper.swift; sourceTree = "<group>"; };
 		FA6216572775D18000144DCE /* CellProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellProtocols.swift; sourceTree = "<group>"; };
 		FA6216592775D31800144DCE /* FirstPlaceTableCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPlaceTableCellModel.swift; sourceTree = "<group>"; };
 		FA62165B277600A400144DCE /* FeaturedPlacesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedPlacesTableViewCell.swift; sourceTree = "<group>"; };
@@ -364,6 +392,91 @@
 				FA06B0272784509F00213279 /* DetailCategoriesCollectionViewCell.xib */,
 			);
 			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		FA0FBDB92785C35500DA068E /* DishDetailScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FA0FBDBE2785C39000DA068E /* DishDetailAssembly */,
+				FA0FBDBD2785C38800DA068E /* DishDetailRouter */,
+				FA0FBDBC2785C37900DA068E /* DishDetailInteractor */,
+				FA0FBDBB2785C36D00DA068E /* DishDetailPresenter */,
+				FA0FBDBA2785C36300DA068E /* DishDetailView */,
+			);
+			path = DishDetailScreen;
+			sourceTree = "<group>";
+		};
+		FA0FBDBA2785C36300DA068E /* DishDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				FA0FBDCF2785C66C00DA068E /* TableView */,
+				FA0FBDBF2785C3AC00DA068E /* DishDetailViewInput.swift */,
+				FA0FBDC12785C3CB00DA068E /* DishDetailViewController.swift */,
+			);
+			path = DishDetailView;
+			sourceTree = "<group>";
+		};
+		FA0FBDBB2785C36D00DA068E /* DishDetailPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				FA0FBDC32785C3F500DA068E /* DishDetailPresenterProtocol.swift */,
+				FA0FBDC52785C40700DA068E /* DishDetailPresenter.swift */,
+			);
+			path = DishDetailPresenter;
+			sourceTree = "<group>";
+		};
+		FA0FBDBC2785C37900DA068E /* DishDetailInteractor */ = {
+			isa = PBXGroup;
+			children = (
+				FA0FBDC72785C42200DA068E /* DishDetailInteractorInput.swift */,
+				FA0FBDC92785C42F00DA068E /* DishDetailInteractor.swift */,
+			);
+			path = DishDetailInteractor;
+			sourceTree = "<group>";
+		};
+		FA0FBDBD2785C38800DA068E /* DishDetailRouter */ = {
+			isa = PBXGroup;
+			children = (
+				FA0FBDCB2785C44B00DA068E /* DishDetailRouter.swift */,
+			);
+			path = DishDetailRouter;
+			sourceTree = "<group>";
+		};
+		FA0FBDBE2785C39000DA068E /* DishDetailAssembly */ = {
+			isa = PBXGroup;
+			children = (
+				FA0FBDCD2785C4C100DA068E /* DishDetailAssembly.swift */,
+			);
+			path = DishDetailAssembly;
+			sourceTree = "<group>";
+		};
+		FA0FBDCF2785C66C00DA068E /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				FA0FBDD72785D19200DA068E /* Models */,
+				FA0FBDD22785CC6B00DA068E /* Cells */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		FA0FBDD22785CC6B00DA068E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FA0FBDD32785CC9300DA068E /* DishDetailTitleTableViewCell.swift */,
+				FA0FBDD42785CC9300DA068E /* DishDetailTitleTableViewCell.xib */,
+				FA0FBDDA2785E6A700DA068E /* DishChoiceTableViewCell.swift */,
+				FA0FBDDB2785E6A700DA068E /* DishChoiceTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		FA0FBDD72785D19200DA068E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FA0FBDD82785D1A700DA068E /* DishDetailTitleCellModel.swift */,
+				FA0FBDDE2785E95500DA068E /* DishChoiceTableCellModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		FA244618277DB64500EFAE5B /* OrderScreen */ = {
@@ -581,6 +694,7 @@
 		FA3AE5F72770980E003543FD /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				FA0FBDB92785C35500DA068E /* DishDetailScreen */,
 				FA24464D277DFA4900EFAE5B /* PlaceDetailScreen */,
 				FA24462E277DB81A00EFAE5B /* ProfileScreen */,
 				FA244618277DB64500EFAE5B /* OrderScreen */,
@@ -720,7 +834,7 @@
 				FA3AE6282770CFB6003543FD /* AuthorizationService.swift */,
 				FAD6E4D62771B37E0029F418 /* SecureStorageService.swift */,
 				FA62164D2775B00C00144DCE /* FirebaseService.swift */,
-				FA62164F2775B2F600144DCE /* DictionaryHelpper.swift */,
+				FA62164F2775B2F600144DCE /* DictionaryHelper.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -1176,6 +1290,7 @@
 			files = (
 				FAF468302779EC27006044FB /* TestCollectionViewCell.xib in Resources */,
 				FAD6E4E12771B9670029F418 /* CustomTextField.xib in Resources */,
+				FA0FBDD62785CC9300DA068E /* DishDetailTitleTableViewCell.xib in Resources */,
 				FA4D16A2277AFB88002C6AB0 /* CustomSearchBar.xib in Resources */,
 				FA06B02327844E2B00213279 /* DetailCategoriesTableViewCell.xib in Resources */,
 				FA0E18F72782E9D60078A351 /* DetailTitleTableViewCell.xib in Resources */,
@@ -1188,6 +1303,7 @@
 				FA0E18FB278323770078A351 /* FeaturedItemsTableViewCell.xib in Resources */,
 				FA06B02D2784744700213279 /* DetailDishTableViewCell.xib in Resources */,
 				FA4D16BF277B58A7002C6AB0 /* CategoryCollectionViewCell.xib in Resources */,
+				FA0FBDDD2785E6A700DA068E /* DishChoiceTableViewCell.xib in Resources */,
 				FA06B0292784509F00213279 /* DetailCategoriesCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1201,8 +1317,11 @@
 			files = (
 				FAA5C20C277350D6007ED365 /* OnboardingInteractorInput.swift in Sources */,
 				FA06B02527844EE400213279 /* DetailCategoriesTableCellModel.swift in Sources */,
+				FA0FBDDC2785E6A700DA068E /* DishChoiceTableViewCell.swift in Sources */,
 				FA4D16A4277B4EA8002C6AB0 /* FiltersModel.swift in Sources */,
+				FA0FBDC42785C3F500DA068E /* DishDetailPresenterProtocol.swift in Sources */,
 				FA244627277DB6E800EFAE5B /* OrderInterctorInput.swift in Sources */,
+				FA0FBDCE2785C4C200DA068E /* DishDetailAssembly.swift in Sources */,
 				FA62165E2776011600144DCE /* DetailPlaceCollectionViewCell.swift in Sources */,
 				FA4D16A0277AFB76002C6AB0 /* CustomSearchBar.swift in Sources */,
 				FA3AE60627709965003543FD /* LoginPresenterProtocol.swift in Sources */,
@@ -1221,6 +1340,7 @@
 				FA4D16B0277B4FFE002C6AB0 /* FilterPresenterProtocol.swift in Sources */,
 				FAF4682F2779EC27006044FB /* TestCollectionViewCell.swift in Sources */,
 				FA244629277DB6F000EFAE5B /* OrderInterctor.swift in Sources */,
+				FA0FBDC02785C3AC00DA068E /* DishDetailViewInput.swift in Sources */,
 				FAA5C1EA2773099E007ED365 /* HomePresenter.swift in Sources */,
 				FA24465E277DFB1400EFAE5B /* PlaceDetailInteractorInput.swift in Sources */,
 				FA244641277DB8CE00EFAE5B /* ProfileRouter.swift in Sources */,
@@ -1260,6 +1380,7 @@
 				FA244635277DB84F00EFAE5B /* ProfileViewInput.swift in Sources */,
 				FAF467FB2779B4AE006044FB /* InfoCellModel.swift in Sources */,
 				FA24461F277DB68300EFAE5B /* OrderViewInput.swift in Sources */,
+				FA0FBDCA2785C42F00DA068E /* DishDetailInteractor.swift in Sources */,
 				FAD6E4D72771B37E0029F418 /* SecureStorageService.swift in Sources */,
 				FAB1713D277093AA004ACB90 /* SceneDelegate.swift in Sources */,
 				FA24463D277DB8A500EFAE5B /* ProfileInteractorInput.swift in Sources */,
@@ -1268,11 +1389,13 @@
 				FA3AE6182770BEF5003543FD /* RegisterViewInput.swift in Sources */,
 				FA3AE60A277099AC003543FD /* LoginInteractor.swift in Sources */,
 				FA24462D277DB78400EFAE5B /* OrderAssembly.swift in Sources */,
+				FA0FBDD52785CC9300DA068E /* DishDetailTitleTableViewCell.swift in Sources */,
 				FA3AE6292770CFB6003543FD /* AuthorizationService.swift in Sources */,
 				FA06B02C2784744700213279 /* DetailDishTableViewCell.swift in Sources */,
 				FA244639277DB87E00EFAE5B /* ProfilePresenterProtocol.swift in Sources */,
 				FA244664277DFB8200EFAE5B /* PlaceDetailAssembly.swift in Sources */,
 				FA244662277DFB3900EFAE5B /* PlaceDetailRouter.swift in Sources */,
+				FA0FBDCC2785C44B00DA068E /* DishDetailRouter.swift in Sources */,
 				FA3AE61C2770BF33003543FD /* RegisterPresenter.swift in Sources */,
 				FAF4681A2779E324006044FB /* SearchViewController.swift in Sources */,
 				FA244654277DFA9600EFAE5B /* PlaceDetailViewInput.swift in Sources */,
@@ -1285,12 +1408,14 @@
 				FA4D16B4277B5041002C6AB0 /* FilterInteractorInput.swift in Sources */,
 				FA3AE60227709926003543FD /* LoginViewInput.swift in Sources */,
 				FA3AE62C2770D289003543FD /* NetworkError.swift in Sources */,
+				FA0FBDDF2785E95500DA068E /* DishChoiceTableCellModel.swift in Sources */,
 				FA3AE6222770BF8D003543FD /* RegisterRouter.swift in Sources */,
 				FA24463B277DB88D00EFAE5B /* ProfilePresenter.swift in Sources */,
 				FAF468242779E359006044FB /* SearchRouter.swift in Sources */,
 				FAF468262779E363006044FB /* SearchAssembly.swift in Sources */,
 				FA4D16AC277B4FC0002C6AB0 /* FilterViewInput.swift in Sources */,
 				FA0E18F32782E9600078A351 /* DetailTitleTableCellModel.swift in Sources */,
+				FA0FBDC62785C40700DA068E /* DishDetailPresenter.swift in Sources */,
 				FAF467F92779B44F006044FB /* InfoTableViewCell.swift in Sources */,
 				FA4D16B8277B5068002C6AB0 /* FilterRouter.swift in Sources */,
 				FA3AE6272770CE57003543FD /* ServiceLocator.swift in Sources */,
@@ -1300,9 +1425,10 @@
 				FA24463F277DB8B100EFAE5B /* ProfileInteractor.swift in Sources */,
 				FAF468202779E345006044FB /* SearchInteractorInput.swift in Sources */,
 				FA4D16B2277B500B002C6AB0 /* FilterPresenter.swift in Sources */,
+				FA0FBDC82785C42200DA068E /* DishDetailInteractorInput.swift in Sources */,
 				FA44099D277CAB6B00AA9AC8 /* PriceFilter.swift in Sources */,
 				FA6216602776087C00144DCE /* FeturedTableCellModel.swift in Sources */,
-				FA6216502775B2F600144DCE /* DictionaryHelpper.swift in Sources */,
+				FA6216502775B2F600144DCE /* DictionaryHelper.swift in Sources */,
 				FA0E18F62782E9D60078A351 /* DetailTitleTableViewCell.swift in Sources */,
 				FAD6E4DF2771B9530029F418 /* CustomTextField.swift in Sources */,
 				FA6216582775D18000144DCE /* CellProtocols.swift in Sources */,
@@ -1317,7 +1443,9 @@
 				FA3AE6242770BFA4003543FD /* RegisterAssembly.swift in Sources */,
 				FA0E18FA278323770078A351 /* FeaturedItemsTableViewCell.swift in Sources */,
 				FAF468182779E315006044FB /* SearchViewInput.swift in Sources */,
+				FA0FBDD92785D1A700DA068E /* DishDetailTitleCellModel.swift in Sources */,
 				FA3AE60427709950003543FD /* LoginPresenter.swift in Sources */,
+				FA0FBDC22785C3CB00DA068E /* DishDetailViewController.swift in Sources */,
 				FAF4681E2779E33A006044FB /* SearchPresenter.swift in Sources */,
 				FAA5C20E277350E9007ED365 /* OnboardingInteractor.swift in Sources */,
 			);

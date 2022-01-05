@@ -16,6 +16,7 @@ struct FeturedTableCellModel: TableViewCompatible {
     func cellForTableView(tableView: UITableView, delegate: MainTableViewDelegate?) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier) as! FeaturedPlacesTableViewCell
         cell.configureCell(with: self)
+        cell.delegate = delegate
         return cell
     }
 }

@@ -18,6 +18,8 @@ class FeaturedPlacesTableViewCell: UITableViewCell, Configurable {
         }
     }
     
+    weak var delegate: MainTableViewDelegate?
+    
     private func setupUI() {
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -39,6 +41,7 @@ extension FeaturedPlacesTableViewCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DetailPlace", for: indexPath) as! DetailPlaceCollectionViewCell
         cell.configureCell(with: placeModels[indexPath.item])
+        cell.delegate = self
         return cell
     }
     
@@ -56,5 +59,12 @@ extension FeaturedPlacesTableViewCell: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: (UIScreen.main.bounds.width / 1.8), height: collectionView.frame.height)
+    }
+}
+
+extension FeaturedPlacesTableViewCell: DetailPlaceCollectionViewCellDelegate {
+    
+    func selectPlace(placeId: String) {
+        delegate?.selectRaw(with: placeId)
     }
 }

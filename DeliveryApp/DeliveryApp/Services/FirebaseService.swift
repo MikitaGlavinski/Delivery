@@ -19,6 +19,7 @@ protocol FirebaseServiceProtocol {
     func clearAllPriceFilters() -> Single<String>
     func getPlace(placeId: String) -> Single<PlaceModel>
     func getDishes(placeId: String) -> Single<[DishesModel]>
+    func getDish(dishId: Int, placeId: String) -> Single<DishesModel>
 }
 
 class FirebaseService: FirebaseServiceProtocol {
@@ -175,5 +176,9 @@ class FirebaseService: FirebaseServiceProtocol {
     
     func getDishes(placeId: String) -> Single<[DishesModel]> {
         getListData(path: "places/\(placeId)/dishes", decodeType: DishesModel.self)
+    }
+    
+    func getDish(dishId: Int, placeId: String) -> Single<DishesModel> {
+        getData(path: "places/\(placeId)/dishes/\(dishId)", decodeType: DishesModel.self)
     }
 }
