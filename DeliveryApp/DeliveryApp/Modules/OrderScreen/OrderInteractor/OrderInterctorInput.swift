@@ -6,7 +6,9 @@
 //
 
 import Foundation
+import RxSwift
 
 protocol OrderInterctorInput {
-    
+    func getUserOrders() -> Single<[DishesModel]>?
+    func checkoutOrders() -> Single<String>?
 }

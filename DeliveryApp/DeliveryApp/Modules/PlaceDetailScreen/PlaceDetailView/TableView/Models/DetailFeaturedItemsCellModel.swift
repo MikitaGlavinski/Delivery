@@ -15,6 +15,7 @@ struct DetailFeaturedItemsCellModel: TableViewCompatible {
     func cellForTableView(tableView: UITableView, delegate: MainTableViewDelegate?) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier) as! FeaturedItemsTableViewCell
         cell.configureCell(with: self)
+        cell.delegate = delegate
         return cell
     }
     

@@ -18,6 +18,10 @@ class DishChoiceTableViewCell: UITableViewCell, Configurable {
         
         bigCheckBoxView.layer.borderWidth = 1
         bigCheckBoxView.layer.borderColor = model.isSelected ? UIColor(red: 34/255, green: 164/255, blue: 97/255, alpha: 1).cgColor : UIColor.lightGray.cgColor
-        smallCheckBoxView.isHidden = model.isSelected ? false : true
+        smallCheckBoxView.backgroundColor = model.isSelected ? UIColor(red: 34/255, green: 164/255, blue: 97/255, alpha: 1) : .clear
+        smallCheckBoxView.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+        UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0, options: .curveEaseInOut) {
+            self.smallCheckBoxView.transform = .identity
+        }
     }
 }

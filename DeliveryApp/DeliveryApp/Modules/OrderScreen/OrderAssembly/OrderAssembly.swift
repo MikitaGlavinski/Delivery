@@ -17,10 +17,15 @@ class OrderAssembly {
         let interactor = OrderInterctor()
         let router = OrderRouter()
         
+        let firebaseService: FirebaseService? = ServiceLocator.shared.getService()
+        let secureStorage: SecureStorageService? = ServiceLocator.shared.getService()
+        
         view.presenter = presenter
         presenter.view = view
         presenter.interactor = interactor
         presenter.router = router
+        interactor.firebaseService = firebaseService
+        interactor.secureStorage = secureStorage
         router.view = view
         
         return view

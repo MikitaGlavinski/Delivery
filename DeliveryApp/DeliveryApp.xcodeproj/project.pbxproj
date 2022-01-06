@@ -101,6 +101,15 @@
 		FA4D16BA277B50C4002C6AB0 /* FilterAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4D16B9277B50C4002C6AB0 /* FilterAssembly.swift */; };
 		FA4D16BE277B58A7002C6AB0 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4D16BC277B58A7002C6AB0 /* CategoryCollectionViewCell.swift */; };
 		FA4D16BF277B58A7002C6AB0 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA4D16BD277B58A7002C6AB0 /* CategoryCollectionViewCell.xib */; };
+		FA52036E2786E51F00F4A17A /* OrderDishTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA52036C2786E51F00F4A17A /* OrderDishTableViewCell.swift */; };
+		FA52036F2786E51F00F4A17A /* OrderDishTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA52036D2786E51F00F4A17A /* OrderDishTableViewCell.xib */; };
+		FA5203712786E65400F4A17A /* OrderDishTableCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5203702786E65400F4A17A /* OrderDishTableCellModel.swift */; };
+		FA5203762787055900F4A17A /* OrderPositionTableCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5203752787055900F4A17A /* OrderPositionTableCellModel.swift */; };
+		FA5203792787059B00F4A17A /* OrderPositionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5203772787059B00F4A17A /* OrderPositionTableViewCell.swift */; };
+		FA52037A2787059B00F4A17A /* OrderPositionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA5203782787059B00F4A17A /* OrderPositionTableViewCell.xib */; };
+		FA52037D278715ED00F4A17A /* OrderCheckoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA52037B278715ED00F4A17A /* OrderCheckoutTableViewCell.swift */; };
+		FA52037E278715ED00F4A17A /* OrderCheckoutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA52037C278715ED00F4A17A /* OrderCheckoutTableViewCell.xib */; };
+		FA520380278718AF00F4A17A /* OrderCheckoutTableCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA52037F278718AF00F4A17A /* OrderCheckoutTableCellModel.swift */; };
 		FA62164C2775AD9E00144DCE /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62164B2775AD9E00144DCE /* PlaceModel.swift */; };
 		FA62164E2775B00C00144DCE /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62164D2775B00C00144DCE /* FirebaseService.swift */; };
 		FA6216502775B2F600144DCE /* DictionaryHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62164F2775B2F600144DCE /* DictionaryHelper.swift */; };
@@ -265,6 +274,15 @@
 		FA4D16B9277B50C4002C6AB0 /* FilterAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterAssembly.swift; sourceTree = "<group>"; };
 		FA4D16BC277B58A7002C6AB0 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		FA4D16BD277B58A7002C6AB0 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		FA52036C2786E51F00F4A17A /* OrderDishTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDishTableViewCell.swift; sourceTree = "<group>"; };
+		FA52036D2786E51F00F4A17A /* OrderDishTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderDishTableViewCell.xib; sourceTree = "<group>"; };
+		FA5203702786E65400F4A17A /* OrderDishTableCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDishTableCellModel.swift; sourceTree = "<group>"; };
+		FA5203752787055900F4A17A /* OrderPositionTableCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderPositionTableCellModel.swift; sourceTree = "<group>"; };
+		FA5203772787059B00F4A17A /* OrderPositionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderPositionTableViewCell.swift; sourceTree = "<group>"; };
+		FA5203782787059B00F4A17A /* OrderPositionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderPositionTableViewCell.xib; sourceTree = "<group>"; };
+		FA52037B278715ED00F4A17A /* OrderCheckoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCheckoutTableViewCell.swift; sourceTree = "<group>"; };
+		FA52037C278715ED00F4A17A /* OrderCheckoutTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderCheckoutTableViewCell.xib; sourceTree = "<group>"; };
+		FA52037F278718AF00F4A17A /* OrderCheckoutTableCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCheckoutTableCellModel.swift; sourceTree = "<group>"; };
 		FA62164B2775AD9E00144DCE /* PlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
 		FA62164D2775B00C00144DCE /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		FA62164F2775B2F600144DCE /* DictionaryHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryHelper.swift; sourceTree = "<group>"; };
@@ -466,6 +484,8 @@
 				FA0FBDD42785CC9300DA068E /* DishDetailTitleTableViewCell.xib */,
 				FA0FBDDA2785E6A700DA068E /* DishChoiceTableViewCell.swift */,
 				FA0FBDDB2785E6A700DA068E /* DishChoiceTableViewCell.xib */,
+				FA52036C2786E51F00F4A17A /* OrderDishTableViewCell.swift */,
+				FA52036D2786E51F00F4A17A /* OrderDishTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -475,6 +495,7 @@
 			children = (
 				FA0FBDD82785D1A700DA068E /* DishDetailTitleCellModel.swift */,
 				FA0FBDDE2785E95500DA068E /* DishChoiceTableCellModel.swift */,
+				FA5203702786E65400F4A17A /* OrderDishTableCellModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -494,6 +515,7 @@
 		FA244619277DB64E00EFAE5B /* OrderView */ = {
 			isa = PBXGroup;
 			children = (
+				FA5203722787053500F4A17A /* TableView */,
 				FA24461E277DB68300EFAE5B /* OrderViewInput.swift */,
 				FA244620277DB69D00EFAE5B /* OrderViewController.swift */,
 			);
@@ -916,6 +938,35 @@
 			path = CollectionViewCells;
 			sourceTree = "<group>";
 		};
+		FA5203722787053500F4A17A /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				FA5203742787054300F4A17A /* Models */,
+				FA5203732787053D00F4A17A /* Cells */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		FA5203732787053D00F4A17A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FA5203772787059B00F4A17A /* OrderPositionTableViewCell.swift */,
+				FA5203782787059B00F4A17A /* OrderPositionTableViewCell.xib */,
+				FA52037B278715ED00F4A17A /* OrderCheckoutTableViewCell.swift */,
+				FA52037C278715ED00F4A17A /* OrderCheckoutTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		FA5203742787054300F4A17A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FA5203752787055900F4A17A /* OrderPositionTableCellModel.swift */,
+				FA52037F278718AF00F4A17A /* OrderCheckoutTableCellModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		FA62164A2775AD8F00144DCE /* ApiModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -1290,16 +1341,19 @@
 			files = (
 				FAF468302779EC27006044FB /* TestCollectionViewCell.xib in Resources */,
 				FAD6E4E12771B9670029F418 /* CustomTextField.xib in Resources */,
+				FA52037A2787059B00F4A17A /* OrderPositionTableViewCell.xib in Resources */,
 				FA0FBDD62785CC9300DA068E /* DishDetailTitleTableViewCell.xib in Resources */,
 				FA4D16A2277AFB88002C6AB0 /* CustomSearchBar.xib in Resources */,
 				FA06B02327844E2B00213279 /* DetailCategoriesTableViewCell.xib in Resources */,
 				FA0E18F72782E9D60078A351 /* DetailTitleTableViewCell.xib in Resources */,
 				FA0E1904278327B30078A351 /* FeatureItemCollectionViewCell.xib in Resources */,
+				FA52037E278715ED00F4A17A /* OrderCheckoutTableViewCell.xib in Resources */,
 				FAB17147277093AB004ACB90 /* LaunchScreen.storyboard in Resources */,
 				FAB171692770952C004ACB90 /* GoogleService-Info.plist in Resources */,
 				FAF4682A2779E994006044FB /* TestTableViewCell.xib in Resources */,
 				FAB17144277093AB004ACB90 /* Assets.xcassets in Resources */,
 				FAB17142277093AA004ACB90 /* Main.storyboard in Resources */,
+				FA52036F2786E51F00F4A17A /* OrderDishTableViewCell.xib in Resources */,
 				FA0E18FB278323770078A351 /* FeaturedItemsTableViewCell.xib in Resources */,
 				FA06B02D2784744700213279 /* DetailDishTableViewCell.xib in Resources */,
 				FA4D16BF277B58A7002C6AB0 /* CategoryCollectionViewCell.xib in Resources */,
@@ -1323,6 +1377,7 @@
 				FA244627277DB6E800EFAE5B /* OrderInterctorInput.swift in Sources */,
 				FA0FBDCE2785C4C200DA068E /* DishDetailAssembly.swift in Sources */,
 				FA62165E2776011600144DCE /* DetailPlaceCollectionViewCell.swift in Sources */,
+				FA520380278718AF00F4A17A /* OrderCheckoutTableCellModel.swift in Sources */,
 				FA4D16A0277AFB76002C6AB0 /* CustomSearchBar.swift in Sources */,
 				FA3AE60627709965003543FD /* LoginPresenterProtocol.swift in Sources */,
 				FA24464C277DF02200EFAE5B /* SettingsCellModel.swift in Sources */,
@@ -1367,12 +1422,14 @@
 				FA62164C2775AD9E00144DCE /* PlaceModel.swift in Sources */,
 				FA0E190627832E900078A351 /* DishesModel.swift in Sources */,
 				FA3AE60E277099DD003543FD /* LoginAssembly.swift in Sources */,
+				FA5203712786E65400F4A17A /* OrderDishTableCellModel.swift in Sources */,
 				FAA5C1EE277309D5007ED365 /* HomeInteractor.swift in Sources */,
 				FAF4680E2779D3FE006044FB /* TitleTableViewCell.swift in Sources */,
 				FA3AE600277098E6003543FD /* LoginViewController.swift in Sources */,
 				FA62165A2775D31800144DCE /* FirstPlaceTableCellModel.swift in Sources */,
 				FA44099F277CAEB500AA9AC8 /* PriceCollectionViewCell.swift in Sources */,
 				FA0E1903278327B30078A351 /* FeatureItemCollectionViewCell.swift in Sources */,
+				FA5203792787059B00F4A17A /* OrderPositionTableViewCell.swift in Sources */,
 				FAB1713B277093AA004ACB90 /* AppDelegate.swift in Sources */,
 				FA3AE61A2770BF1D003543FD /* RegisterPresenterProtocol.swift in Sources */,
 				FAA5C20627735077007ED365 /* OnboardingViewInput.swift in Sources */,
@@ -1380,6 +1437,7 @@
 				FA244635277DB84F00EFAE5B /* ProfileViewInput.swift in Sources */,
 				FAF467FB2779B4AE006044FB /* InfoCellModel.swift in Sources */,
 				FA24461F277DB68300EFAE5B /* OrderViewInput.swift in Sources */,
+				FA5203762787055900F4A17A /* OrderPositionTableCellModel.swift in Sources */,
 				FA0FBDCA2785C42F00DA068E /* DishDetailInteractor.swift in Sources */,
 				FAD6E4D72771B37E0029F418 /* SecureStorageService.swift in Sources */,
 				FAB1713D277093AA004ACB90 /* SceneDelegate.swift in Sources */,
@@ -1396,9 +1454,11 @@
 				FA244664277DFB8200EFAE5B /* PlaceDetailAssembly.swift in Sources */,
 				FA244662277DFB3900EFAE5B /* PlaceDetailRouter.swift in Sources */,
 				FA0FBDCC2785C44B00DA068E /* DishDetailRouter.swift in Sources */,
+				FA52037D278715ED00F4A17A /* OrderCheckoutTableViewCell.swift in Sources */,
 				FA3AE61C2770BF33003543FD /* RegisterPresenter.swift in Sources */,
 				FAF4681A2779E324006044FB /* SearchViewController.swift in Sources */,
 				FA244654277DFA9600EFAE5B /* PlaceDetailViewInput.swift in Sources */,
+				FA52036E2786E51F00F4A17A /* OrderDishTableViewCell.swift in Sources */,
 				FA62165C277600A400144DCE /* FeaturedPlacesTableViewCell.swift in Sources */,
 				FAEB4C232774A09800ABC8FD /* FirstPlaceTableViewCell.swift in Sources */,
 				FAA5C1F0277309ED007ED365 /* HomeRouter.swift in Sources */,

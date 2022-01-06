@@ -91,4 +91,8 @@ extension PlaceDetailViewController: MainTableViewDelegate {
     func selectCategory(category: String) {
         presenter.filterDishes(by: category)
     }
+    
+    func selectDish(with id: Int) {
+        presenter.showDishDetail(dishId: id)
+    }
 }

@@ -35,6 +35,7 @@ class DishDetailPresenter {
         for (index, choice) in dishModel.choices.enumerated() {
             cellModels.append(DishChoiceTableCellModel(name: choice, isSelected: index == selectedChoice))
         }
+        cellModels.append(OrderDishTableCellModel())
         view.setupTableView(cellModels: cellModels, imageURL: dishModel.image)
     }
 }
@@ -60,5 +61,23 @@ extension DishDetailPresenter: DishDetailPresenterProtocol {
         guard let index = dishModel.choices.firstIndex(where: {$0 == name}) else { return }
         selectedChoice = index
         setupTableView()
+    }
+    
+    func closeView() {
+        router.dismissView()
+    }
+    
+    func setDishOrder() {
+        view.showLoader()
+        guard let orderSetter = interactor.setDishOrder(dish: dishModel) else { return }
+        orderSetter
+            .observe(on: MainScheduler.instance)
+            .subscribe(onSuccess: { [weak self] complete in
+                self?.view.hideLoader()
+                self?.closeView()
+            }, onFailure: { [weak self] error in
+                self?.view.hideLoader()
+                self?.view.showError(error: error)
+            }).disposed(by: disposeBag)
     }
 }

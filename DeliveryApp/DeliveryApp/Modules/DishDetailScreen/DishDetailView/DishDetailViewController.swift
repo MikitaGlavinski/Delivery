@@ -12,8 +12,7 @@ class DishDetailViewController: BaseViewController {
     
     var presenter: DishDetailPresenterProtocol!
     
-    private var height: NSLayoutConstraint?
-    private var bottom: NSLayoutConstraint?
+    @IBOutlet weak var imageHeightConstraint: NSLayoutConstraint!
     
     private var cellModels = [TableViewCompatible]() {
         didSet {
@@ -33,8 +32,13 @@ class DishDetailViewController: BaseViewController {
     private func setupUI() {
         tableView.register(UINib(nibName: "DishDetailTitleTableViewCell", bundle: nil), forCellReuseIdentifier: "DishDetailTitle")
         tableView.register(UINib(nibName: "DishChoiceTableViewCell", bundle: nil), forCellReuseIdentifier: "DishChoice")
+        tableView.register(UINib(nibName: "OrderDishTableViewCell", bundle: nil), forCellReuseIdentifier: "OrderDish")
         tableView.dataSource = self
         tableView.delegate = self
+    }
+    
+    @IBAction func closeButtonTapped(_ sender: Any) {
+        presenter.closeView()
     }
 }
 
@@ -55,7 +59,7 @@ extension DishDetailViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let model = cellModels[indexPath.row]
-        let cell = model.cellForTableView(tableView: tableView, delegate: nil)
+        let cell = model.cellForTableView(tableView: tableView, delegate: self)
         return cell
     }
     
@@ -78,12 +82,14 @@ extension DishDetailViewController: UITableViewDelegate {
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if let imageView = headerView.subviews.first as? UIImageView {
-            height = imageView.constraints.filter({$0.identifier == "height"}).first
-            bottom = imageView.constraints.filter({$0.identifier == "bottom"}).first
-        }
-        
         let offsetY = -scrollView.contentOffset.y
-        height?.constant = max(headerView.bounds.height, headerView.bounds.height + offsetY)
+        imageHeightConstraint?.constant = max(headerView.bounds.height, headerView.bounds.height + offsetY)
+    }
+}
+
+extension DishDetailViewController: MainTableViewDelegate {
+    
+    func addOrder() {
+        presenter.setDishOrder()
     }
 }

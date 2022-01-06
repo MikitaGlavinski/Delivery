@@ -10,4 +10,6 @@ import Foundation
 protocol DishDetailPresenterProtocol: AnyObject {
     func viewDidLoad()
     func selectChoice(with name: String)
+    func closeView()
+    func setDishOrder()
 }

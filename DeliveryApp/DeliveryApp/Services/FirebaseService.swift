@@ -20,6 +20,9 @@ protocol FirebaseServiceProtocol {
     func getPlace(placeId: String) -> Single<PlaceModel>
     func getDishes(placeId: String) -> Single<[DishesModel]>
     func getDish(dishId: Int, placeId: String) -> Single<DishesModel>
+    func setUserOrder(dish: DishesModel, userToken: String) -> Single<String>
+    func getUserOrders(userToken: String) -> Single<[DishesModel]>
+    func deleteOrders(userToken: String) -> Single<String>
 }
 
 class FirebaseService: FirebaseServiceProtocol {
@@ -142,6 +145,31 @@ class FirebaseService: FirebaseServiceProtocol {
         }
     }
     
+    private func deleteAllDocuments(path: String) -> Single<String> {
+        Single<String>.create { [weak self] observer -> Disposable in
+            self?.db.collection(path).getDocuments(completion: { snapshot, error in
+                if let error = error {
+                    observer(.failure(error))
+                    return
+                }
+                var counter: Int = 0
+                snapshot?.documents.forEach({ document in
+                    counter += 1
+                    document.reference.delete { error in
+                        if let error = error {
+                            observer(.failure(error))
+                            return
+                        }
+                        if counter == snapshot?.documents.count {
+                            observer(.success("Ok"))
+                        }
+                    }
+                })
+            })
+            return Disposables.create()
+        }
+    }
+    
     func getPlaces() -> Single<[PlaceModel]> {
         getListData(path: "places", decodeType: PlaceModel.self)
     }
@@ -180,5 +208,17 @@ class FirebaseService: FirebaseServiceProtocol {
     
     func getDish(dishId: Int, placeId: String) -> Single<DishesModel> {
         getData(path: "places/\(placeId)/dishes/\(dishId)", decodeType: DishesModel.self)
+    }
+    
+    func setUserOrder(dish: DishesModel, userToken: String) -> Single<String> {
+        setData(path: "users/\(userToken)/orders/\(UUID().uuidString)", value: dish)
+    }
+    
+    func getUserOrders(userToken: String) -> Single<[DishesModel]> {
+        getListData(path: "users/\(userToken)/orders", decodeType: DishesModel.self)
+    }
+    
+    func deleteOrders(userToken: String) -> Single<String> {
+        deleteAllDocuments(path: "users/\(userToken)/orders")
     }
 }

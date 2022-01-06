@@ -8,5 +8,6 @@
 import Foundation
 
 protocol OrderPresenterProtocol: AnyObject {
-    
+    func viewWillAppear()
+    func checkoutOrder()
 }

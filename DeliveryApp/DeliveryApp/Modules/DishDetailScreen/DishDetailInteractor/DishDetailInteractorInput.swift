@@ -10,4 +10,5 @@ import RxSwift
 
 protocol DishDetailInteractorInput {
     func obtainDish(dishId: Int, placeId: String) -> Single<DishesModel>?
+    func setDishOrder(dish: DishesModel) -> Single<String>?
 }

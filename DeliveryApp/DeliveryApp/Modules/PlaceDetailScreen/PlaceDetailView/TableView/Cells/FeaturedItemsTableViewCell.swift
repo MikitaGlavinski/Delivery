@@ -11,6 +11,7 @@ class FeaturedItemsTableViewCell: UITableViewCell, Configurable {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
+    weak var delegate: MainTableViewDelegate!
     private var dishesModels: [DishesModel]! {
         didSet {
             collectionView.reloadData()
@@ -33,6 +34,7 @@ extension FeaturedItemsTableViewCell: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FeatureItem", for: indexPath) as! FeatureItemCollectionViewCell
+        cell.delegate = self
         cell.configureCell(with: dishesModels[indexPath.item])
         return cell
     }
@@ -41,5 +43,12 @@ extension FeaturedItemsTableViewCell: UICollectionViewDataSource {
 extension FeaturedItemsTableViewCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 130, height: 190)
+    }
+}
+
+extension FeaturedItemsTableViewCell: FeatureItemCollectionViewCellDelegate {
+    
+    func selectDish(with id: Int) {
+        delegate.selectDish(with: id)
     }
 }

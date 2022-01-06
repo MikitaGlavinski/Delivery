@@ -47,19 +47,29 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Funfetti" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="y1q-4W-Qxe">
-                        <rect key="frame" x="60" y="21.5" width="240" height="23"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Funfetti" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="y1q-4W-Qxe">
+                        <rect key="frame" x="60" y="18.5" width="240" height="23"/>
                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l3s-lx-I92">
+                        <rect key="frame" x="20" y="59" width="280" height="0.5"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="0.71282419217687076" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="K8k-Py-PMN"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="y1q-4W-Qxe" secondAttribute="trailing" constant="20" id="1Zg-hl-PkH"/>
+                    <constraint firstItem="y1q-4W-Qxe" firstAttribute="centerY" secondItem="Mmo-2E-kpl" secondAttribute="centerY" id="8HV-Bd-ZoX"/>
                     <constraint firstItem="0w6-jZ-ufR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="8nV-zG-KCW"/>
-                    <constraint firstAttribute="bottom" secondItem="0w6-jZ-ufR" secondAttribute="bottom" constant="15" id="ECb-Vz-agy"/>
-                    <constraint firstItem="y1q-4W-Qxe" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="XwO-Ee-bbj"/>
+                    <constraint firstAttribute="trailing" secondItem="l3s-lx-I92" secondAttribute="trailing" constant="20" id="Wgo-KY-XuH"/>
                     <constraint firstItem="y1q-4W-Qxe" firstAttribute="leading" secondItem="0w6-jZ-ufR" secondAttribute="trailing" constant="10" id="YFI-VA-h0j"/>
+                    <constraint firstAttribute="bottom" secondItem="l3s-lx-I92" secondAttribute="bottom" id="arC-CV-zWm"/>
+                    <constraint firstItem="l3s-lx-I92" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="bX1-0T-Bh6"/>
+                    <constraint firstItem="l3s-lx-I92" firstAttribute="top" secondItem="0w6-jZ-ufR" secondAttribute="bottom" constant="14" id="lN7-kM-sIQ"/>
                     <constraint firstItem="0w6-jZ-ufR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="sC3-eI-2eN"/>
                 </constraints>
             </tableViewCellContentView>
