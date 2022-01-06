@@ -10,10 +10,6 @@ import UIKit
 class OnboardingViewController: UIViewController {
     
     var presenter: OnboardingPresenterProtocol!
-    
-    @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var pageControl: CustomPageControl!
-    
     private var cellModels = [
         OnboardingCellViewModel(
             image: UIImage(named: "delivery")!,
@@ -31,6 +27,9 @@ class OnboardingViewController: UIViewController {
             description: "Easily find your type of food craving and you'll get delivery in wide range."
         )
     ]
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var pageControl: CustomPageControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()

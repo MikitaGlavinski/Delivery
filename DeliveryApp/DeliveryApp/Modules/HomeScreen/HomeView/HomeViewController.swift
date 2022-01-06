@@ -10,14 +10,13 @@ import UIKit
 class HomeViewController: BaseViewController {
     
     var presenter: HomePresenterProtocol!
-
-    @IBOutlet weak var tableView: UITableView!
-    
     private var cellModels = [TableViewCompatible]() {
         didSet {
             tableView.reloadData()
         }
     }
+
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -34,7 +33,6 @@ class HomeViewController: BaseViewController {
     private func setupUI() {
         tableView.register(UINib(nibName: "TestTableViewCell", bundle: nil), forCellReuseIdentifier: "Test")
         tableView.dataSource = self
-        tableView.delegate = self
     }
     
     @IBAction func filtersTapped(_ sender: Any) {
@@ -52,17 +50,13 @@ extension HomeViewController: HomeViewInput {
 extension HomeViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        cellModels.count
+        return cellModels.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let model = cellModels[indexPath.row]
         return model.cellForTableView(tableView: tableView, delegate: self)
     }
-}
-
-extension HomeViewController: UITableViewDelegate {
-    
 }
 
 extension HomeViewController: MainTableViewDelegate {

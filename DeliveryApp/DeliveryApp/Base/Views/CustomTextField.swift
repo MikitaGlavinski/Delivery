@@ -35,7 +35,7 @@ class CustomTextField: UIView {
         view.layer.borderWidth = 1.0
         view.layer.borderColor = UIColor.lightGray.cgColor
         view.layer.cornerRadius = 5.0
-
+        
         textField.delegate = self
     }
     
@@ -60,5 +60,10 @@ class CustomTextField: UIView {
 extension CustomTextField: UITextFieldDelegate {
     func textFieldDidChangeSelection(_ textField: UITextField) {
         label.isHidden = (textField.text ?? "") == "" ? false : true
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }

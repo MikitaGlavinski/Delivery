@@ -9,6 +9,13 @@ import UIKit
 
 class DetailTitleTableViewCell: UITableViewCell, Configurable {
     
+    private var takeAwayIsSelected: Bool = false {
+        didSet {
+            takeAwayButton.tintColor = takeAwayIsSelected ? .white : UIColor(red: 34/255, green: 164/255, blue: 93/255, alpha: 1)
+            takeAwayButton.backgroundColor = takeAwayIsSelected ? UIColor(red: 34/255, green: 164/255, blue: 93/255, alpha: 1) : .white
+        }
+    }
+    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var firstFoodTypeLabel: UILabel!
@@ -16,13 +23,6 @@ class DetailTitleTableViewCell: UITableViewCell, Configurable {
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var takeAwayButton: UIButton!
-    
-    private var takeAwayIsSelected: Bool = false {
-        didSet {
-            takeAwayButton.tintColor = takeAwayIsSelected ? .white : UIColor(red: 34/255, green: 164/255, blue: 93/255, alpha: 1)
-            takeAwayButton.backgroundColor = takeAwayIsSelected ? UIColor(red: 34/255, green: 164/255, blue: 93/255, alpha: 1) : .white
-        }
-    }
     
     func configureCell(with model: DetailTitleTableCellModel) {
         nameLabel.text = model.title

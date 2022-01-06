@@ -15,8 +15,6 @@ protocol CategoryCollectionViewCellDelegate: AnyObject {
 
 class CategoryCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var label: UILabel!
-    
     private let disposeBag = DisposeBag()
     weak var delegate: CategoryCollectionViewCellDelegate!
     
@@ -31,6 +29,8 @@ class CategoryCollectionViewCell: UICollectionViewCell {
             }
         }
     }
+    
+    @IBOutlet weak var label: UILabel!
     
     func configureCell(with model: FiltersModel) {
         self.filterModel = model

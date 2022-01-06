@@ -11,15 +11,13 @@ import Kingfisher
 class DishDetailViewController: BaseViewController {
     
     var presenter: DishDetailPresenterProtocol!
-    
-    @IBOutlet weak var imageHeightConstraint: NSLayoutConstraint!
-    
     private var cellModels = [TableViewCompatible]() {
         didSet {
             tableView.reloadData()
         }
     }
-
+    
+    @IBOutlet weak var imageHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var headerView: UIView!
     

@@ -14,18 +14,18 @@ class LoginViewController: BaseViewController {
     
     var presenter: LoginPresenterProtocol!
     private let disposeBag = DisposeBag()
-
-    @IBOutlet weak var emailTextField: CustomTextField!
-    @IBOutlet weak var passwordTextField: CustomTextField!
-    @IBOutlet weak var createAccountButton: UIButton!
-    @IBOutlet weak var emailLabel: UILabel!
-    @IBOutlet weak var passwordLabel: UILabel!
     
     private lazy var facebookButton: FBLoginButton = {
         let button = FBLoginButton()
         button.delegate = self
         return button
     }()
+
+    @IBOutlet weak var emailTextField: CustomTextField!
+    @IBOutlet weak var passwordTextField: CustomTextField!
+    @IBOutlet weak var createAccountButton: UIButton!
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var passwordLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -9,13 +9,13 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-protocol MainCollectionViewDelegate: AnyObject {
+protocol DetailCategoriesCollectionViewCellDelegate: AnyObject {
     func selectCategory(category: String, index: Int)
 }
 
 class DetailCategoriesCollectionViewCell: UICollectionViewCell {
     
-    weak var delegate: MainCollectionViewDelegate!
+    weak var delegate: DetailCategoriesCollectionViewCellDelegate!
     private let disposeBag = DisposeBag()
     private var index: Int = 0
     private var category: String = "" {

@@ -56,4 +56,9 @@ extension CustomSearchBar: UITextFieldDelegate {
         placeholderLabel.isHidden = textField.text?.isEmpty == true ? false : true
         delegate.textDidChenged(text: textField.text ?? "", searchBar: self)
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }

@@ -10,20 +10,9 @@ import RxSwift
 import RxCocoa
 
 class TestTableViewCell: UITableViewCell, Configurable {
-
-    @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var pageControl: CustomPageControl!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var priceLabel: UILabel!
-    @IBOutlet weak var firstFoodTypeLabel: UILabel!
-    @IBOutlet weak var secondFoodTypeLabel: UILabel!
-    @IBOutlet weak var ratingLabel: UILabel!
-    @IBOutlet weak var timeLabel: UILabel!
     
     weak var delegate: MainTableViewDelegate!
-    
     private let disposeBag = DisposeBag()
-    
     private var placeModel: PlaceModel! {
         didSet {
             collectionView.reloadData()
@@ -38,6 +27,15 @@ class TestTableViewCell: UITableViewCell, Configurable {
             }
         }
     }
+
+    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var pageControl: CustomPageControl!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var firstFoodTypeLabel: UILabel!
+    @IBOutlet weak var secondFoodTypeLabel: UILabel!
+    @IBOutlet weak var ratingLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
     
     func configureCell(with model: RestaurantCellModel) {
         setupUI()

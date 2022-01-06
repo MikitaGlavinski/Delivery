@@ -8,8 +8,6 @@
 import UIKit
 
 class FeaturedItemsTableViewCell: UITableViewCell, Configurable {
-
-    @IBOutlet weak var collectionView: UICollectionView!
     
     weak var delegate: MainTableViewDelegate!
     private var dishesModels: [DishesModel]! {
@@ -17,6 +15,8 @@ class FeaturedItemsTableViewCell: UITableViewCell, Configurable {
             collectionView.reloadData()
         }
     }
+
+    @IBOutlet weak var collectionView: UICollectionView!
     
     func configureCell(with model: DetailFeaturedItemsCellModel) {
         collectionView.register(UINib(nibName: "FeatureItemCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "FeatureItem")

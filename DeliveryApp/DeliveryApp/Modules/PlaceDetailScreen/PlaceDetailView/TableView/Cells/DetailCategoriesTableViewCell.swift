@@ -53,7 +53,7 @@ extension DetailCategoriesTableViewCell: UICollectionViewDelegateFlowLayout {
     }
 }
 
-extension DetailCategoriesTableViewCell: MainCollectionViewDelegate {
+extension DetailCategoriesTableViewCell: DetailCategoriesCollectionViewCellDelegate {
     
     func selectCategory(category: String, index: Int) {
         selectedCategoryIndex = index

@@ -17,12 +17,6 @@ class FeatureItemCollectionViewCell: UICollectionViewCell {
     
     private let disposeBag = DisposeBag()
     weak var delegate: FeatureItemCollectionViewCellDelegate!
-
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var priceLabel: UILabel!
-    @IBOutlet weak var foodTypeLabel: UILabel!
-    
     private var dishesModel: DishesModel! {
         didSet {
             imageView.kf.setImage(with: URL(string: dishesModel.image), placeholder: UIImage(named: "foodPlaceholder"), options: [.cacheMemoryOnly])
@@ -34,6 +28,11 @@ class FeatureItemCollectionViewCell: UICollectionViewCell {
             }
         }
     }
+
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var foodTypeLabel: UILabel!
     
     func configureCell(with model: DishesModel) {
         dishesModel = model

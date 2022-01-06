@@ -10,9 +10,6 @@ import RxSwift
 import RxCocoa
 
 class FirstPlaceTableViewCell: UITableViewCell, Configurable {
-
-    @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var pageControl: CustomPageControl!
     
     private let disposeBag = DisposeBag()
     
@@ -23,6 +20,9 @@ class FirstPlaceTableViewCell: UITableViewCell, Configurable {
         }
     }
     weak var delegate: MainTableViewDelegate?
+
+    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var pageControl: CustomPageControl!
     
     private func setupUI() {
         collectionView.register(UINib(nibName: "TestCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "Test")

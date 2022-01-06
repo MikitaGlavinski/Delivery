@@ -11,10 +11,9 @@ class PlaceDetailViewController: BaseViewController {
     
     var presenter: PlaceDetailPresenterProtocol!
     private var selectedCategoryIndex: Int = 0
+    private var cellModels = [TableViewCompatible]()
     
     @IBOutlet weak var tableView: UITableView!
-    
-    private var cellModels = [TableViewCompatible]()
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

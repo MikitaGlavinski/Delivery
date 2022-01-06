@@ -9,9 +9,6 @@ import UIKit
 
 class FeaturedPlacesTableViewCell: UITableViewCell, Configurable {
     
-    @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var nameLabel: UILabel!
-    
     private var placeModels = [PlaceModel]() {
         didSet {
             collectionView.reloadData()
@@ -19,6 +16,9 @@ class FeaturedPlacesTableViewCell: UITableViewCell, Configurable {
     }
     
     weak var delegate: MainTableViewDelegate?
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var nameLabel: UILabel!
     
     private func setupUI() {
         collectionView.dataSource = self

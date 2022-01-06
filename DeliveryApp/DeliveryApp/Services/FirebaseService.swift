@@ -25,7 +25,7 @@ protocol FirebaseServiceProtocol {
     func deleteOrders(userToken: String) -> Single<String>
 }
 
-class FirebaseService: FirebaseServiceProtocol {
+class FirebaseService {
     
     private let db = Firestore.firestore()
     
@@ -169,7 +169,9 @@ class FirebaseService: FirebaseServiceProtocol {
             return Disposables.create()
         }
     }
-    
+}
+
+extension FirebaseService: FirebaseServiceProtocol {
     func getPlaces() -> Single<[PlaceModel]> {
         getListData(path: "places", decodeType: PlaceModel.self)
     }

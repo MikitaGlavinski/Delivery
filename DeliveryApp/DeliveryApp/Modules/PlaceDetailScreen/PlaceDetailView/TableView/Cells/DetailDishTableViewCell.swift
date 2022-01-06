@@ -9,13 +9,6 @@ import UIKit
 import Kingfisher
 
 class DetailDishTableViewCell: UITableViewCell, Configurable {
-
-    @IBOutlet weak var dishImageView: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var priceTypeLabel: UILabel!
-    @IBOutlet weak var foodTypeLabel: UILabel!
-    @IBOutlet weak var priceLabel: UILabel!
     
     private var dishModel: DishesModel! {
         didSet {
@@ -30,6 +23,13 @@ class DetailDishTableViewCell: UITableViewCell, Configurable {
             }
         }
     }
+
+    @IBOutlet weak var dishImageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var priceTypeLabel: UILabel!
+    @IBOutlet weak var foodTypeLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
     
     func configureCell(with model: DetailDishTableCellModel) {
         dishModel = model.dish

@@ -10,13 +10,6 @@ import UIKit
 class FilterViewController: BaseViewController {
     
     var presenter: FilterPresenterProtocol!
-    @IBOutlet weak var categoriesCollectionView: UICollectionView!
-    @IBOutlet weak var categoriesCollectionViewHeight: NSLayoutConstraint!
-    @IBOutlet weak var dietaryCollectionView: UICollectionView!
-    @IBOutlet weak var dietaryCollectionViewHeight: NSLayoutConstraint!
-    @IBOutlet weak var priceFilterCollectionView: UICollectionView!
-    @IBOutlet weak var scrollView: UIScrollView!
-    
     private var categoriesModels = [FiltersModel]() {
         didSet {
             categoriesCollectionView.reloadData()
@@ -34,6 +27,13 @@ class FilterViewController: BaseViewController {
             priceFilterCollectionView.reloadData()
         }
     }
+    
+    @IBOutlet weak var categoriesCollectionView: UICollectionView!
+    @IBOutlet weak var categoriesCollectionViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var dietaryCollectionView: UICollectionView!
+    @IBOutlet weak var dietaryCollectionViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var priceFilterCollectionView: UICollectionView!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -119,6 +119,7 @@ class FilterViewController: BaseViewController {
 }
 
 extension FilterViewController: FilterViewInput {
+    
     func setupFilters(categories: [FiltersModel], dietary: [FiltersModel], priceFilters: [PriceFilter]) {
         categoriesModels = categories
         dietaryModels = dietary

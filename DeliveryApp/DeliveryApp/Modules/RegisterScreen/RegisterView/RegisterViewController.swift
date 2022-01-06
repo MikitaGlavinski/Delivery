@@ -16,6 +16,12 @@ class RegisterViewController: BaseViewController {
     
     private let disposeBag = DisposeBag()
     
+    private lazy var facebookButton: FBLoginButton = {
+        let button = FBLoginButton()
+        button.delegate = self
+        return button
+    }()
+    
     @IBOutlet weak var nameTextField: CustomTextField!
     @IBOutlet weak var emailTextField: CustomTextField!
     @IBOutlet weak var passwordTextField: CustomTextField!
@@ -25,12 +31,6 @@ class RegisterViewController: BaseViewController {
     @IBOutlet weak var passwordLabel: UILabel!
     @IBOutlet weak var confirmPasswordLabel: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
-    
-    private lazy var facebookButton: FBLoginButton = {
-        let button = FBLoginButton()
-        button.delegate = self
-        return button
-    }()
     
     override func viewWillAppear(_ animated: Bool) {
         NotificationCenter.default.addObserver(self, selector: #selector(appearKeyboard), name: UIResponder.keyboardWillShowNotification, object: nil)

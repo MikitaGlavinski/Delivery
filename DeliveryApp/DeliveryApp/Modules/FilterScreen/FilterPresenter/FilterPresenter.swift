@@ -19,6 +19,7 @@ class FilterPresenter {
 }
 
 extension FilterPresenter: FilterPresenterProtocol {
+    
     func viewDidLoad() {
         view.showLoader()
         var categories: [FiltersModel]!
@@ -44,12 +45,15 @@ extension FilterPresenter: FilterPresenterProtocol {
     }
     
     func updateFilter(filter: FiltersModel) {
+        view.showLoader()
         guard let filterUpdater = interactor.setFilter(filter: filter) else { return }
         filterUpdater
             .observe(on: MainScheduler.instance)
-            .subscribe(onSuccess: { complete in
+            .subscribe(onSuccess: { [weak self] complete in
+                self?.view.hideLoader()
                 print(complete)
             }, onFailure: { [weak self] error in
+                self?.view.hideLoader()
                 self?.view.showError(error: error)
             }).disposed(by: disposeBag)
     }
@@ -83,12 +87,15 @@ extension FilterPresenter: FilterPresenterProtocol {
     }
     
     func updatePriceFilter(filter: PriceFilter) {
+        self.view.showLoader()
         guard let filterUpdater = interactor.setPriceFilter(filter: filter) else { return }
         filterUpdater
             .observe(on: MainScheduler.instance)
-            .subscribe(onSuccess: { complete in
+            .subscribe(onSuccess: { [weak self] complete in
+                self?.view.hideLoader()
                 print(complete)
             }, onFailure: { [weak self] error in
+                self?.view.hideLoader()
                 self?.view.showError(error: error)
             }).disposed(by: disposeBag)
     }

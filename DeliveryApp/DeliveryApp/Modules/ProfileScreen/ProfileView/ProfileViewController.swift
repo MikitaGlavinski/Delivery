@@ -10,8 +10,6 @@ import UIKit
 class ProfileViewController: UIViewController {
     
     var presenter: ProfilePresenterProtocol!
-    @IBOutlet weak var tableView: UITableView!
-    
     private var cellModels: [SettingsCellModel] = [
         SettingsCellModel(image: UIImage(systemName: "person.fill")!, title: "Profile Information", subTitle: "Change your account information"),
         SettingsCellModel(image: UIImage(systemName: "lock.fill")!, title: "Change Password", subTitle: "Change your password"),
@@ -20,6 +18,8 @@ class ProfileViewController: UIViewController {
         SettingsCellModel(image: UIImage(systemName: "message.fill")!, title: "Add Social Account", subTitle: "Add Facebook, Twitter etc"),
         SettingsCellModel(image: UIImage(systemName: "arrowshape.turn.up.forward.fill")!, title: "Refer to Friends", subTitle: "Get $10 for reffering friends")
     ]
+    
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
